@@ -28,7 +28,6 @@ CREATE TABLE IF NOT EXISTS `projetodb`.`perfil` (
   `perfil` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 3
 DEFAULT CHARACTER SET = latin1;
 
 
