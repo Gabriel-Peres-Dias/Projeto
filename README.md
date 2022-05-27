@@ -19,7 +19,7 @@ Em desenvolvimento. Porém, já se encontra na fase final.
 
 ##  Acesso ao projeto
 
-**Basta baixa-lo pelo github pelo link: https://github.com/Gabriel-Peres-Dias/projeto**.
+**Basta baixa-lo pelo github pelo link: https://github.com/Gabriel-Peres-Dias/Projeto**.
 
 ##  Abrir e rodar o projeto
 
