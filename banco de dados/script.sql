@@ -118,6 +118,8 @@ CREATE TABLE IF NOT EXISTS `projetodb`.`usuario` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
+INSERT INTO perfil(perfil) VALUES ('administrador'),('cliente');
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
