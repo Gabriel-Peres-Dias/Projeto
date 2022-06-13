@@ -75,7 +75,7 @@
         <div class="menu">
           <ul class="grid">
             <li>
-              <a class="title" href="../home/home_administrador.html">Início</a>
+              <a class="title" href="../home/home_administrador.php">Início</a>
             </li>
           </ul>
         </div>
@@ -101,7 +101,7 @@
             <input class="label" type="text" name="email" value =" <?php echo  $email ?>" required />
 
             <label for="telefone" class="label-text"><strong>Telefone</strong></label>
-            <input class="label" type="text" name="telefone" value =" <?php echo  $telefone ?>" required minlength="11" maxlength="11" />
+            <input class="label" type="text" name="telefone" value =" <?php echo  $telefone ?>"/>
 
             <label for="senha" class="label-text"><strong>Senha</strong></label>
             <input class="label" type="text" name="senha" value =" <?php echo  $senha ?>" required />

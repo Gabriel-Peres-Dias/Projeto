@@ -83,7 +83,7 @@
       <div class="menu">
         <ul class="grid">
           <li>
-            <a class="title" href="../home/home_administrador.html">Início</a>
+            <a class="title" href="../home/home_administrador.php">Início</a>
           </li>
         </ul>
       </div>

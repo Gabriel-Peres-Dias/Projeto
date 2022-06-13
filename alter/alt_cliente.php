@@ -73,7 +73,7 @@
         <!-- Menu -->
         <div class="dd-menu">
           <ul>
-            <li><a href="../home/home_administrador.html">Início</a></li>
+            <li><a href="../home/home_administrador.php">Início</a></li>
           </ul>
         </div>
       </nav>
@@ -93,13 +93,13 @@
             <input class="label" type="email" name="email" value =" <?php echo  $email ?>" required/>
 
             <label for="CPF" class="label-text"><strong>CPF<br /></strong></label>
-            <input class="label" type="text" name="cpf"  value =" <?php echo  $cpf ?>" required minlength="11" maxlength="11"/>
+            <input class="label" type="text" name="cpf"  value =" <?php echo  $cpf ?>"/>
 
             <label for="Endereco" class="label-text"><strong>Endereço<br /></strong></label>
             <input class="label" type="text" name="endereco" value =" <?php echo  $endereco?>" required/>
 
             <label for="Telefone" class="label-text"><strong>Telefone<br/></strong></label>
-            <input class="label" type="text" name="telefone" value =" <?php echo  $telefone?>" required minlength="11" maxlength="11" />
+            <input class="label" type="text" name="telefone" value =" <?php echo  $telefone?>" />
 
             <input class="label" type="hidden" name="id" value =" <?php echo  $id ?>" required />
 

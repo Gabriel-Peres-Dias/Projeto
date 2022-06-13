@@ -20,11 +20,10 @@
 
 <body>
 
-<script src="../js05_confirm.js"></script>
   <!-- Header -->
   <header id="header">
     <nav class="container">
-      <a class="logo" href="../home/home_administrador.html">mecânica<span>baiano</span>.</a>
+      <a class="logo" href="../home/home_administrador.php">mecânica<span>baiano</span>.</a>
 
       <!-- MENU -->
       <div class="dd-menu">
@@ -42,7 +41,7 @@
               <li><a href="../listar/listar_admin.php">Administradores</a></li>
             </ul>
           </li>
-          <li><a href="#" onclick="mostrarPopUp()">Sair</a></li>
+          <li><a>Sair</a></li>
         </ul>
       </div>
     </nav>

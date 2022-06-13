@@ -31,7 +31,7 @@ session_start();
       <!-- Menu -->
       <div class="dd-menu">
         <ul>
-          <li><a href="../home/home_administrador.html">Início</a></li>
+          <li><a href="../home/home_administrador.php">Início</a></li>
         </ul>
       </div>
     </nav>

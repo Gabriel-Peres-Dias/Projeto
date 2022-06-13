@@ -161,7 +161,7 @@ if(isset($_POST['cadastrar_cliente']))
         $url = 'http://localhost/projeto/cadastrar/cad_cliente.php';
         $_SESSION['cpf_uso'] = "O CPF já está em uso<br>";
         $_SESSION['erroCPF'] = 1;
-        echo "<META HTTP-EQUIV=REFRESH CONTENT = '10;URL=$url'>";
+        echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=$url'>";
       } else {
       $_SESSION['value_cpf'] = $_POST['cpf'];
       $_SESSION['erroCPF'] = 0 ;
@@ -171,7 +171,7 @@ if(isset($_POST['cadastrar_cliente']))
         $url = 'http://localhost/projeto/cadastrar/cad_cliente.php';
         $_SESSION['nomeC_uso'] = "O Nome já está em uso<br>";
         $_SESSION['erroN'] = 1;
-        echo "<META HTTP-EQUIV=REFRESH CONTENT = '10;URL=$url'>";
+        echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=$url'>";
       } else {
         $_SESSION['value_nomeC'] = $_POST['nome'];
         $_SESSION['erroN'] = 0;
@@ -181,7 +181,7 @@ if(isset($_POST['cadastrar_cliente']))
         $url = 'http://localhost/projeto/cadastrar/cad_cliente.php';
         $_SESSION['emailC_uso'] = "O E-mail já está em uso<br>";
         $_SESSION['erroE'] = 1;
-        echo "<META HTTP-EQUIV=REFRESH CONTENT = '10;URL=$url'>";
+        echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=$url'>";
       } else {
         $_SESSION['value_emailC'] = $_POST['email'];
         $_SESSION['erroE'] = 0;
@@ -191,7 +191,7 @@ if(isset($_POST['cadastrar_cliente']))
         $url = 'http://localhost/projeto/cadastrar/cad_cliente.php';
         $_SESSION['telefoneC_uso'] = "O telefone já está em uso<br>";
         $_SESSION['erroT'] = 1;
-        echo "<META HTTP-EQUIV=REFRESH CONTENT = '10;URL=$url'>";
+        echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=$url'>";
       } else {
         $_SESSION['value_telefoneC'] = $_POST['telefone'];
         $_SESSION['erroT'] = 0;
@@ -211,10 +211,11 @@ if(isset($_POST['cadastrar_cliente']))
         unset($_SESSION['cpf_uso']);
         unset($_SESSION['value_telefoneC']);
         unset($_SESSION['telefoneC_uso']);
-        unset($_SESSIOn['erroCPF']);
-        unset($_SESSIOn['erroN']);
-        unset($_SESSIOn['erroE']);
-        unset($_SESSIOn['erroT']);
+        unset($_SESSION['erroCPF']);
+        unset($_SESSION['erroN']);
+        unset($_SESSION['erroE']);
+        unset($_SESSION['erroT']);
+        unset($_SESSION['value_enderecoC']);
       echo "Cliente cadastrado com sucesso!!";
       header('Location: ../listar/listar_clientes.php');
       exit(); 
