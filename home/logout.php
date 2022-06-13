@@ -2,5 +2,5 @@
 
 session_start();
 session_destroy();
-header('Location: ../home/home_administrador.html');
+header('Location: ../home/home_administrador.php');
 exit();

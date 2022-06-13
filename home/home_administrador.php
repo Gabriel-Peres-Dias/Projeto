@@ -1,80 +1,92 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt_BR">
+  <head>
+    <!-- Page Info -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
 
-<head>
-  <!-- Page Info -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="assets/fonts/style.css" />
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="assets/fonts/style.css" />
+    <!-- STYLES -->
+    <link rel="stylesheet" href="../style/stylelogin.css" />
 
-  <!-- STYLES -->
-  <link rel="stylesheet" href="../style/stylelogin.css" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <!-- FONTS -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
-</head>
+  <body>
 
-<body>
+    <!-- Header -->
+    <header id="header">
+      <nav class="container">
+        <a class="logo" href="../home/home_administrador.html"
+          >mecânica<span>baiano</span>.</a
+        >
 
-  <!-- Header -->
-  <header id="header">
-    <nav class="container">
-      <a class="logo" href="../home/home_administrador.php">mecânica<span>baiano</span>.</a>
+        <!-- MENU -->
+        <div class="dd-menu">
+          <ul>
+            <li><a href="../home/login.html">Início</a></li>
+            <li><a href="../cadastrar/cad_administrador.php">Cadastrar</a>
+            
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-      <!-- MENU -->
-      <div class="dd-menu">
-        <ul>
-          <li><a href="#">Cadastrar</a>
-            <ul>
-              <li><a href="../cadastrar/cad_cliente.php">Clientes</a></li>
-            </ul>
-          </li>
-          <li><a href="">Listar</a>
-            <ul>
-              <li><a href="../listar/listar_clientes.php">Clientes</a></li>
-              <li><a href="../listar/listar_agendamentos.php">Agendamentos</a></li>
-              <li><a href="../listar/listar_orcamentos.php">Orçamentos</a></li>
-              <li><a href="../listar/listar_admin.php">Administradores</a></li>
-            </ul>
-          </li>
-          <li><a>Sair</a></li>
-        </ul>
+    <main>
+      <fieldset class="field">
+        <form action="../home/login.php" method="POST">
+          <h1>Acesso ao Sistema</h1>
+
+          <label class="label-text" for="email"><strong>Email</strong></label>
+          <input class="label" type="email" name="email" required />
+
+          <label class="label-text" for="senha"><strong>Senha</strong></label>
+          <input class="label" type="password" name="senha" required />
+
+          <?php
+							if(!empty($_SESSION['erro'])){
+                echo "<p style='color: #f00;text-align: center '>".$_SESSION['erro']."</p>";
+								unset($_SESSION['erro']);
+							}
+					 ?>
+
+          <input class="button" type="submit" name="acao" value="Entrar" />
+        </form>
+      </fieldset>
+    </main>
+
+    <footer class="section">
+      <div class="container grid">
+        <div class="brand">
+          <a class="logo logo-alt" href="#home">mecânica<span>baiano</span>.</a>
+          <p>©2022 mecânicaeverton.</p>
+          <p>Todos os direitos reservados.</p>
+        </div>
+
+        <div class="social grid">
+          <a
+            href="https://api.whatsapp.com/send?phone=+5561993398630&text=Oi! Gostaria de agendar um horário"
+            target="_blank"
+            ><i class="icon-whatsapp"></i
+          ></a>
+        </div>
       </div>
-    </nav>
-  </header>
+    </footer>
+  </body>
 
-  <main>
-    <?php
-
-    require "../validation/conn.php";
-    require "../validation/verifica.php";
-
-    $resultadoM = mysqli_query($conexao, "SELECT nome FROM usuario WHERE email = '{$_SESSION['email']}' AND senha = '{$_SESSION['senha']}'");
-    $linhasM = mysqli_num_rows($resultadoM);
-    for ($m = 0; $m < $linhasM; $m++) {
-      $nome = mysqli_fetch_row($resultadoM);
-    }
-    
-    ?>
-
-  </main>
-  <footer class="section">
-    <div class="container grid">
-      <div class="brand">
-        <a class="logo logo-alt" href="#home">mecânica<span>baiano</span>.</a>
-        <p>©2022 mecânicaeverton.</p>
-        <p>Todos os direitos reservados.</p>
-      </div>
-
-      <div class="social grid">
-        <a href="https://api.whatsapp.com/send?phone=+5561993398630&text=Oi! Gostaria de agendar um horário" target="_blank"><i class="icon-whatsapp"></i></a>
-      </div>
-    </div>
-  </footer>
-</body>
-
+  <!-- main.js -->
+  <script src="main.js"></script>
 </html>

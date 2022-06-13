@@ -69,7 +69,7 @@
       <div class="menu">
         <ul class="grid">
           <li>
-            <a class="title" href="../home/home_administrador.php">Início</a>
+            <a class="title" href="../home/index.php">Início</a>
           </li>
         </ul>
       </div>
@@ -121,7 +121,7 @@
 
         <?php
 							if(!empty($_SESSION['horario_uso'])){
-								echo "<p style='color: #f00; '>".$_SESSION['horario_uso']."</p>";
+								echo "<p style='color: #f00; text-align: center'>".$_SESSION['horario_uso']."</p>";
 								unset($_SESSION['horario_uso']);
 							}
 					 ?>

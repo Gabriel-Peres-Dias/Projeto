@@ -24,9 +24,11 @@ if ($row == 1) {
     $_SESSION['email'] = $email;
     $_SESSION['senha'] = $senha;
 
-    header('Location: ../home/home_administrador.php');
+    header('Location: ../home/index.php');
     exit();
 } else {
-    header('Location: ../home/home_administrador.html');
+    $url = 'http://localhost/projeto/home/home_administrador.php';
+    $_SESSION['erro'] = "<br>Login incorreto!";
+    echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=$url'>";
     exit();
 }

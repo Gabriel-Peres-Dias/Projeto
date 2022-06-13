@@ -31,7 +31,7 @@ session_start();
       <!-- Menu -->
       <div class="dd-menu">
         <ul>
-          <li><a href="../home/home_administrador.php">Início</a></li>
+          <li><a href="../home/index.php">Início</a></li>
         </ul>
       </div>
     </nav>
@@ -55,7 +55,7 @@ session_start();
 
           <?php
 							if(!empty($_SESSION['nomeC_uso'])){
-                echo "<p style='color: #f00; '>".$_SESSION['nomeC_uso']."</p>";
+                echo "<p style='color: #f00; text-align: center'>".$_SESSION['nomeC_uso']."</p>";
 								unset($_SESSION['nomeC_uso']);
 							}
 					 ?>
@@ -71,7 +71,7 @@ session_start();
 
           <?php 
 							if(!empty($_SESSION['emailC_uso'])){
-                echo "<p style='color: #f00; '>".$_SESSION['emailC_uso']."</p>";
+                echo "<p style='color: #f00; text-align: center '>".$_SESSION['emailC_uso']."</p>";
 								unset($_SESSION['emailC_uso']);
 							}
 					 ?>
@@ -87,7 +87,7 @@ session_start();
 
           <?php 
 							if(!empty($_SESSION['cpf_uso'])){
-                echo "<p style='color: #f00; '>".$_SESSION['cpf_uso']."</p>";
+                echo "<p style='color: #f00; text-align: center '>".$_SESSION['cpf_uso']."</p>";
 								unset($_SESSION['cpf_uso']);
 							}
 					 ?>
@@ -112,7 +112,7 @@ session_start();
 
           <?php
 							if(!empty($_SESSION['telefoneC_uso'])){
-                echo "<p style='color: #f00; '>".$_SESSION['telefoneC_uso']."</p>";
+                echo "<p style='color: #f00; text-align: center '>".$_SESSION['telefoneC_uso']."</p>";
 								unset($_SESSION['telefoneC_uso']);
 							}
 					 ?>

@@ -31,7 +31,7 @@
       <!-- Menu -->
      <div class="dd-menu">
         <ul>
-              <li><a href="../home/home_administrador.php">Início</a></li>
+              <li><a href="../home/index.php">Início</a></li>
               <li><a href="../listar/listar_clientes.php">Clientes</a></li>
               <li><a href="../listar/listar_agendamentos.php">Agendamentos</a></li>
               <li><a href="../listar/listar_admin.php">Administradores</a></li>

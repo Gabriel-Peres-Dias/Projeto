@@ -41,7 +41,7 @@ $row = mysqli_num_rows($result);
 
   if($row > 0) {
     $url = 'http://localhost/projeto/cadastrar/cad_administrador.php';
-    $_SESSION['matricula_uso'] = "A Matrícula já está em uso<br>";
+    $_SESSION['matricula_uso'] = "*A Matrícula já está em uso<br>";
     echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=$url'>";
     $_SESSION['erroM'] = 1;
   } else {
@@ -51,7 +51,7 @@ $row = mysqli_num_rows($result);
 
   if($rown > 0) {
     $url = 'http://localhost/projeto/cadastrar/cad_administrador.php';
-    $_SESSION['nome_uso'] = "O Nome já está em uso<br>";
+    $_SESSION['nome_uso'] = "*O Nome já está em uso<br>";
     echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=$url'>";
     $_SESSION['erroN'] = 1;
   } else {
@@ -61,7 +61,7 @@ $row = mysqli_num_rows($result);
 
   if($rowe > 0) {
     $url = 'http://localhost/projeto/cadastrar/cad_administrador.php';
-    $_SESSION['email_uso'] = "O E-mail já está em uso<br>";
+    $_SESSION['email_uso'] = "*O E-mail já está em uso<br>";
     echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=$url'>";
     $_SESSION['erroE'] = 1;
   } else {
@@ -71,7 +71,7 @@ $row = mysqli_num_rows($result);
 
   if($rowt > 0) {
     $url = 'http://localhost/projeto/cadastrar/cad_administrador.php';
-    $_SESSION['telefone_uso'] = "O telefone já está em uso<br>";
+    $_SESSION['telefone_uso'] = "*O telefone já está em uso<br>";
     echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=$url'>";
     $_SESSION['erroT'] = 1;
   } else {
@@ -100,7 +100,7 @@ $row = mysqli_num_rows($result);
     unset($_SESSIOn['erroE']);
     unset($_SESSIOn['erroT']);
   
-    header('Location: ../home/home_administrador.html');
+    header('Location: ../home/home_administrador.php');
     exit();
    }
   }
@@ -159,7 +159,7 @@ if(isset($_POST['cadastrar_cliente']))
     
       if($rowc > 0) {
         $url = 'http://localhost/projeto/cadastrar/cad_cliente.php';
-        $_SESSION['cpf_uso'] = "O CPF já está em uso<br>";
+        $_SESSION['cpf_uso'] = "*O CPF já está em uso<br>";
         $_SESSION['erroCPF'] = 1;
         echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=$url'>";
       } else {
@@ -169,7 +169,7 @@ if(isset($_POST['cadastrar_cliente']))
     
       if($rown > 0) {
         $url = 'http://localhost/projeto/cadastrar/cad_cliente.php';
-        $_SESSION['nomeC_uso'] = "O Nome já está em uso<br>";
+        $_SESSION['nomeC_uso'] = "*O Nome já está em uso<br>";
         $_SESSION['erroN'] = 1;
         echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=$url'>";
       } else {
@@ -179,7 +179,7 @@ if(isset($_POST['cadastrar_cliente']))
     
       if($rowe > 0) {
         $url = 'http://localhost/projeto/cadastrar/cad_cliente.php';
-        $_SESSION['emailC_uso'] = "O E-mail já está em uso<br>";
+        $_SESSION['emailC_uso'] = "*O E-mail já está em uso<br>";
         $_SESSION['erroE'] = 1;
         echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=$url'>";
       } else {
@@ -189,7 +189,7 @@ if(isset($_POST['cadastrar_cliente']))
     
       if($rowt > 0) {
         $url = 'http://localhost/projeto/cadastrar/cad_cliente.php';
-        $_SESSION['telefoneC_uso'] = "O telefone já está em uso<br>";
+        $_SESSION['telefoneC_uso'] = "*O telefone já está em uso<br>";
         $_SESSION['erroT'] = 1;
         echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=$url'>";
       } else {
@@ -288,7 +288,7 @@ if(isset($_POST['cadastrar_agendamento']))
     $row = mysqli_num_rows($result);
 
     if($row > 0) {
-      $_SESSION['horario_uso'] = "O Horário já está em uso<br>";
+      $_SESSION['horario_uso'] = "*O Horário já está em uso<br>";
       echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=http://localhost/projeto/cadastrar/cad_agendamento.php?id=$id'>";
       $_SESSION['erroH'] = 1;
     } else {

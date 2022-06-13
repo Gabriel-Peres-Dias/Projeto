@@ -34,7 +34,7 @@ session_start();
       <div class="menu">
         <ul class="grid">
           <li>
-            <a class="title" href="../home/home_administrador.html">Início</a>
+            <a class="title" href="../home/home_administrador.php">Início</a>
           </li>
         </ul>
       </div>
@@ -60,7 +60,7 @@ session_start();
 
           <?php
 							if(!empty($_SESSION['matricula_uso'])){
-                echo "<p style='color: #f00; '>".$_SESSION['matricula_uso']."</p>";
+                echo "<p style='color: #f00; text-align: center '>".$_SESSION['matricula_uso']."</p>";
 								unset($_SESSION['matricula_uso']);
 							}
 					 ?>
@@ -78,7 +78,7 @@ session_start();
 
           <?php
 							if(!empty($_SESSION['nome_uso'])){
-								echo "<p style='color: #f00; '>".$_SESSION['nome_uso']."</p>";
+								echo "<p style='color: #f00; text-align: center '>".$_SESSION['nome_uso']."</p>";
 								unset($_SESSION['nome_uso']);
 							}
 					 ?>
@@ -106,7 +106,7 @@ session_start();
 
           <?php
 							if(!empty($_SESSION['email_uso'])){
-                echo "<p style='color: #f00; '>".$_SESSION['email_uso']."</p>";
+                echo "<p style='color: #f00; text-align: center '>".$_SESSION['email_uso']."</p>";
 								unset($_SESSION['email_uso']);
 							}
 					 ?>
@@ -123,7 +123,7 @@ session_start();
 
           <?php
 							if(!empty($_SESSION['telefone_uso'])){
-                echo "<p style='color: #f00; '>".$_SESSION['telefone_uso']."</p>";
+                echo "<p style='color: #f00; text-align: center '>".$_SESSION['telefone_uso']."</p>";
 								unset($_SESSION['telefone_uso']);
 							}
 					 ?>
