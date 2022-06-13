@@ -4,7 +4,7 @@ require "../validation/conn.php";
 
 // Verificando se os campos estão vazios
 if (empty($_POST['email']) || empty($_POST['senha'])) {
-    header('Location: ../home/home_administrador.html');
+    header('Location: ../home/home_administrador.php');
     exit();
 }
 

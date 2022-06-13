@@ -29,7 +29,7 @@ session_start();
     <!-- Header -->
     <header id="header">
       <nav class="container">
-        <a class="logo" href="../home/home_administrador.html"
+        <a class="logo" href="../home/home_administrador.php"
           >mecânica<span>baiano</span>.</a
         >
 

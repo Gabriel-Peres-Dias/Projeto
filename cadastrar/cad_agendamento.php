@@ -63,7 +63,7 @@
   <!-- Header -->
   <header id="header">
     <nav class="container">
-      <a class="logo" href="../home/home_administrador.html">mecânica<span>baiano</span>.</a>
+      <a class="logo" href="../home/home_administrador.php">mecânica<span>baiano</span>.</a>
 
       <!-- MENU -->
       <div class="menu">
