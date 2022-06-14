@@ -12,6 +12,7 @@
 
   <!-- STYLES -->
   <link rel="stylesheet" href="../style/stylelogin.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -19,6 +20,29 @@
 </head>
 
 <body>
+
+  <!-- Modal -->
+  <div class='modal fade' id='modalExemplo' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+      <div class='modal-dialog' role='document'>
+        <div class='modal-content'>
+          <div class='modal-header'>
+            <h5 class='modal-title' id='exampleModalLabel'>Deseja sair da conta?</h5>
+            <button type='button' class='close' data-dismiss='modal' aria-label='Fechar'>
+              <span aria-hidden='true'>&times;</span>
+            </button>
+          </div>
+          <div class='modal-body'>
+            *Ao sai da conta sua sessão será encerrada!
+          </div>
+          <div class='modal-footer'>
+            <button type='button' class='btn btn-secondary ' data-dismiss='modal'>Fechar</button>
+            <a class = 'btn  btn-primary' href = 'logout.php'>Encerrar Sessão</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
   <!-- Header -->
   <header id="header">
@@ -41,11 +65,13 @@
               <li><a href="../listar/listar_admin.php">Administradores</a></li>
             </ul>
           </li>
-          <li><a>Sair</a></li>
+          <li><a data-toggle='modal' href='#modalExemplo'>Sair</a></li>
         </ul>
       </div>
     </nav>
   </header>
+
+            
 
   <main>
     <?php
@@ -75,6 +101,7 @@
       </div>
     </div>
   </footer>
+  <script src="../bootstrap.min.js"></script>
 </body>
 
 </html>

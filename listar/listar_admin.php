@@ -126,7 +126,7 @@
             echo "</tr>";
           }
          ?>
-         <script src="bootstrap.js"></script>
+         
         </tbody>
       </table>
       </div>
