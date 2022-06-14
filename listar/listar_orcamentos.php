@@ -62,6 +62,22 @@
 
   ?>
 
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="text-align: center;">
+  <div class="modal-dialog" role="document">
+   <div class="modal-content ">
+	  <div class="modal-header" style="height: 60px;">
+	   <h4 class="modal-title " id="exampleModalLongTitle">Sucesso!</h2>
+		<button type="button" class="close col-md-1" data-dismiss="modal" aria-label="Close">
+		<span aria-hidden="true">×</span>
+		</button>
+	  </div>
+	  <div class="modal-body">
+	   <h5>Orçamento atribuído com exito.</h5>
+	    </div>
+   </div>
+  </div>
+</div>
+
 <div class = "m-5">
         <table class="table">
       <thead>
@@ -139,6 +155,14 @@
            
             </td>";
             echo "</tr>";
+          }
+
+          if(!empty($_SESSION['sucesso'])){
+            echo "<script type='text/javascript'>
+            $(window).on('load',function(){
+            $('#myModal').modal('show'); });
+        </script>";
+            unset($_SESSION['sucesso']);
           }
          ?>
         </tbody>

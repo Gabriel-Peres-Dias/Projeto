@@ -216,7 +216,7 @@ if(isset($_POST['cadastrar_cliente']))
         unset($_SESSION['erroE']);
         unset($_SESSION['erroT']);
         unset($_SESSION['value_enderecoC']);
-      echo "Cliente cadastrado com sucesso!!";
+        $_SESSION['sucesso'] = 1;
       header('Location: ../listar/listar_clientes.php');
       exit(); 
       } 
@@ -306,7 +306,7 @@ if(isset($_POST['cadastrar_agendamento']))
         unset($_SESSION['value_horario']);
         unset($_SESSION['value_dia']);
         unset($_SESSION['erroH']);        
-        
+        $_SESSION['sucesso'] = 1;
         header ('Location: ../listar/listar_agendamentos.php');
       }
     }
@@ -333,7 +333,7 @@ if(isset($_POST['cadastrar_agendamento']))
       $sql = "INSERT INTO orcamento(valor, servico_id) VALUES ";
       $sql .= "('$valor','$id')";
       $resultado = mysqli_query($conexao, $sql);
-      echo ("Orçamento cadastrado com sucesso!!");
+      $_SESSION['sucesso'] = 1;
       header ('Location: ../listar/listar_orcamentos.php');
       
       }
