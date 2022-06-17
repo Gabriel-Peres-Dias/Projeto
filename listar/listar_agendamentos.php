@@ -11,8 +11,9 @@
   <link rel="stylesheet" href="assets/fonts/style.css" />
 
   <!-- STYLES -->
-  <link rel="stylesheet" href="../style/stylelist.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../style/stylelist.css" />
 
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -20,27 +21,27 @@
 </head>
 
 <body>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
   <header id="header">
     <nav class="container">
-      <a class="logo" href="../home/home_administrador.php">mecânica<span>baiano</span>.</a>
+      <a class="logo" href="../home/index.php">mecânica<span>baiano</span>.</a>
 
-     <!-- Menu -->
-     <div class="dd-menu">
+      <!-- Menu -->
+      <div class="dd-menu">
         <ul>
-              <li><a href="../home/index.php">Início</a></li>
-              <li><a href="../listar/listar_clientes.php">Clientes</a></li>
-              <li><a href="../listar/listar_orcamentos.php">Orçamentos</a></li>
-              <li><a href="../listar/listar_admin.php">Administradores</a></li>
-            </ul>
-          </li>
+          <li><a href="../home/index.php">Início</a></li>
+          <li><a href="../listar/listar_clientes.php">Clientes</a></li>
+          <li><a href="../listar/listar_orcamentos.php">Orçamentos</a></li>
+          <li><a href="../listar/listar_admin.php">Administradores</a></li>
+        </ul>
+        </li>
         </ul>
       </div>
     </nav>
   </header>
 
-  
-  
   <main>
     <?php
 
@@ -50,9 +51,8 @@
     $resultado = mysqli_query($conexao, " SELECT servico.id, cliente.nomeC, tira_risco,revitalizacao_pintura,polimento_cristalizado,micro_pintura,polimento_farol,pintura_geral, horario, dia FROM cliente
  INNER JOIN servico on cliente.id = servico.cliente_id ORDER BY dia asc
                ");
-    
-    mysqli_close($conexao);
 
+    mysqli_close($conexao);
     ?>
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="text-align: center;">
@@ -71,23 +71,23 @@
   </div>
 </div>
 
-<div class = "m-5">
-        <table class="table">
-      <thead>
-        <tr>
-              <th scope="col">Nome do Cliente</th>
-              <th scope="col">Serviço(s)</th>
-              <th scope="col">Horario</th>
-              <th scope="col">Data</th>
-              <th scope="col">Editar</th>
-              <th scope="col">Excluir</th>
-              <th scope="col">Orçamento</th>
-        </tr>
-      </thead>
-      <tbody>
-         <?php
-          while($user_data = mysqli_fetch_assoc($resultado))
-          {
+    <div class="container py-5">
+      <table class="table  table-light">
+        <thead>
+          <tr>
+            <th scope="col">Nome do Cliente</th>
+            <th scope="col">Serviço(s)</th>
+            <th scope="col">Horario</th>
+            <th scope="col">Data</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Excluir</th>
+            <th scope="col">Orçamento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+          while ($user_data = mysqli_fetch_assoc($resultado)) {
+
             echo "<!-- Modal -->
     <div class='modal fade' id='modalExemplo' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
       <div class='modal-dialog' role='document'>
@@ -110,7 +110,7 @@
     </div>";
 
             echo "<tr>";
-            echo "<td>".$user_data['nomeC']."</td>";
+            echo "<td>" . $user_data['nomeC'] . "</td>";
             if ($user_data['tira_risco'] == 1) {
               echo "<td>Tira Risco<BR>";
             } else {
@@ -131,15 +131,9 @@
             if ($user_data['pintura_geral'] == 1) {
               echo "Pintura Geral</td>";
             }
-            echo "<td>".$user_data['horario']."</td>";
-            echo "<td>".date('d/m/Y', strtotime($user_data['dia']))."</td>";
-            echo "<td>
-             <a class = 'btn btn-sm btn-primary' href = '../alter/alt_agendamento.php?id=$user_data[id]'>
-             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil-square' viewBox='0 0 16 16'>
-             <path d='M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z'/>
-             <path fill-rule='evenodd' d='M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z'/>
-           </svg>
-            </td>";
+            echo "<td>" . $user_data['horario'] . "</td>";
+            echo "<td>" . date('d/m/Y', strtotime($user_data['dia'])) . "</td>";
+            echo "<td> <a class = 'btn btn-sm btn-primary' href = '../alter/alt_agendamento.php?id=$user_data[id]'><i class='bi bi-pencil-square'></i> </a> </td>";
             echo "<td>
             <button type='button' class='btn btn-sm btn btn-sm btn-danger' data-toggle='modal' data-target='#modalExemplo'>
             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trash' viewBox='0 0 16 16'>
@@ -149,29 +143,21 @@
 </button>
            
             </td>";
-            echo "<td>
-            <a class = 'btn btn-sm btn btn-success  ' href = '../cadastrar/cad_orcamento.php?id=$user_data[id]'>
-            <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus-square' viewBox='0 0 16 16'>
- <path d='M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z'/>
- <path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/>
-</svg>
-           </td>";
+            echo "<td> <a class = 'btn btn-sm btn-success' href = '../cadastrar/cad_orcamento.php?id=$user_data[id]'><i class='bi bi-plus-square'></i> </a> </td>";
             echo "</tr>";
+            
+            if(!empty($_SESSION['sucesso'])){
+              echo "<script type='text/javascript'>
+              $(window).on('load',function(){
+              $('#myModal').modal('show'); });
+          </script>";
+              unset($_SESSION['sucesso']);
+            }
           }
-
-          
-							if(!empty($_SESSION['sucesso'])){
-								echo "<script type='text/javascript'>
-                $(window).on('load',function(){
-                $('#myModal').modal('show'); });
-            </script>";
-								unset($_SESSION['sucesso']);
-							}
-						 
-         ?>
+          ?>
         </tbody>
       </table>
-      </div>
+    </div>
 
     <footer class="section">
       <div class="container grid">
@@ -180,16 +166,10 @@
           <p>©2022 mecânicaeverton.</p>
           <p>Todos os direitos reservados.</p>
         </div>
-
-        <div class="social grid">
-          <a href="https://api.whatsapp.com/send?phone=+5561993398630&text=Oi! Gostaria de agendar um horário" target="_blank"><i class="icon-whatsapp"></i></a>
-        </div>
       </div>
     </footer>
   </main>
 </body>
 <!-- main.js -->
-<script src="main.js"></script>
 <script src="../bootstrap.min.js"></script>
-
 </html>

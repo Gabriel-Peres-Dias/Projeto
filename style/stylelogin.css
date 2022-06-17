@@ -9,10 +9,6 @@ ul {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
-}
-
 /*====  VARIABLES ============================ */
 :root {
   --header-height: 4.5rem;
@@ -43,39 +39,141 @@ html {
 
 body {
   font: 400 1rem var(--body-font);
-  color: var(--text-color);
-  background: var(--body-color);
+  background: linear-gradient(45deg, rgb(159, 84, 230), rgb(78, 49, 206));
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   -webkit-font-smoothing: antialiased;
 }
 
-.title {
-  font: 700 var(--title-font-size) var(--title-font);
-  color: var(--title-color);
-  -webkit-font-smoothing: auto;
+main.container{
+  background: white;
+  min-width: 350px;
+  min-height: 45vh;
+  padding: 2rem;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+main h1{
+  font-weight: 600;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+main h1::before{
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 25px;
+  bottom: 3px;
+  left: 0;
+  border-radius: 8px;
+  background: linear-gradient(45deg, rgb(159, 84, 230), rgb(78, 49, 206));
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field{
+  position: relative;
+}
+
+.input-field input{
+  outline: none;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: var(--tittle-font);
+}
+
+.input-field input::placeholder{
+  color: rgba(0, 0, 0, 0.5);
+}
+
+input{
+  width: 100%;
+  border: 0;
+  outline: none;
+}
+
+input:focus{
+  border: 0;
+}
+
+input[type="submit"]{
+  margin-top: 2rem;
+  margin-bottom: -0.5rem;
+  padding: 0.6rem;
+  background: linear-gradient(to left, rgb(174, 111, 233), rgb(118, 93, 228));
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 4px;
+  transition: all 0.3 ease; 
+}
+
+input[type="submit"]:hover {
+  letter-spacing: 0.5px;
+  background: linear-gradient(15deg, rgb(174, 111, 233), rgb(118, 93, 228));
+}
+
+.input-field .underline::before{
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.input-field .underline::after{
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transform-origin: left;
+}
+
+.input-field input:focus ~ .underline::after{
+  opacity: 1;
+  background: linear-gradient(rgb(174, 111, 233), rgb(118, 93, 228));
+}
+
+.separate a{
+  text-decoration: none;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0.6rem;
+  background: linear-gradient(to left, rgb(174, 111, 233), rgb(118, 93, 228));
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 4px;
+  transition: all 0.3 ease; 
+  }
+
+.separate a:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(15deg, rgb(174, 111, 233), rgb(118, 93, 228));
+}
+
+.space{
+  margin-top: 1.5rem;
 }
 
 /*====  LAYOUT ============================ */
-.container {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-
-.grid {
-  display: grid;
-  gap: 2rem;
-}
-
-.section {
-  padding: calc(5rem + var(--header-height)) 0;
-}
-
-.section header {
-  margin-bottom: 4rem;
-}
-
-.section header strong {
-  color: var(--base-color);
-}
 
 #header {
   border-bottom: 1px solid #e4e4e4;
@@ -96,357 +194,75 @@ body {
 
 /*====  LOGO ============================ */
 .logo {
-  font: 700 1.31rem var(--title-font);
-  color: var(--title-color);
+  font: 700 0.8rem var(--title-font);
+  color: black;
+  text-decoration: none;
+  margin-top: 1.5rem;
 }
 
 .logo span {
-  color: var(--base-color);
+  color: black;
 }
 
 .logo-alt {
-  font-size: 1.7rem;
+  font-size: 1.2rem;
+  display: flex;
 }
 
 .logo-alt span {
-  color: var(--body-color);
-}
-
-/*====  NAVIGATION ============================ */
-nav {
-  height: var(--header-height);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-nav ul li a {
-  transition: color 0.2s;
-  position: relative;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-  color: var(--base-color);
-}
-
-nav ul li a::after {
-  content: '';
-  width: 0%;
-  height: 2px;
-  background: var(--base-color);
-
-  position: absolute;
-  left: 0;
-  bottom: -1rem;
-
-  transition: width 0.2s;
-}
-
-nav ul ul li a::after{
-  content: '';
-  width: 0%;
-  height: 2px;
-  background: var(--base-color);
-
-  position: absolute;
-  left: 0;
-  bottom: 0.1rem;
-
-  transition: width 0.2s;
-}
-
-nav ul li a:hover::after,
-nav ul li a.active::after {
-  width: 100%;
-
-}
-
-/*====  DROP DOWN MENU ==================== */
-
-.dd-menu ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.dd-menu ul li{
-  display: inline;  
-  position: relative;
-}
-
-.dd-menu ul li a{
-  text-decoration: none;
-  color: var(--title-color);
-  padding: 0.8rem;
-  display: inline-block;
-}
-
-/*====  SUB MENU ======================== */
-
-.dd-menu ul ul{
-  display: none;
-  position: absolute;
-  left: 0;
-}
-
-.dd-menu ul li:hover ul{
-  display: block;
-}
-
-.dd-menu ul ul {
-  width: 9.375rem;
-  padding-top: 1rem;
-}
-
-.dd-menu ul ul li a{
-  display: block;
-}
-
-/*====  SCHEDULING FORM =================== */
-
-h1 {
-  color: var(--base-color);
-  padding-bottom: 3rem;
-}
-
-.field {
-  border: 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 3rem 0;
-  width: 15.9%;
-}
-
-.label {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 1.5rem;
-  border-radius: 5px 10px;
-  border-color: rgb(231, 234, 255);
-}
-
-.label:focus {
-  background: rgb(240, 243, 252);
-}
-
-.label-text {
-  margin-left: 3.8rem;
-}
-
-.button {
-  background-color: var(--base-color);
-  color: var(--text-color-light);
-  height: 3rem;
-  padding: 0 3rem;
-  border-radius: 0.25rem;
-  font: 500 1rem var(--body-font);
-  transition: background 0.3s;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-
-}
-
-.button:hover {
-  background: var(--base-color-alt);
-}
-
-
-/*====  FOOTER ========================== */
-footer {
-  background: var(--base-color);
-  position: absolute;
-  bottom: 0;
-  width: 100%
-}
-
-footer.section {
-  padding: 4rem 0;
-}
-
-footer .logo {
-  display: inline-block;
-  margin-bottom: 1.5rem;
-}
-
-footer .brand p {
-  color: var(--text-color-light);
-  margin-bottom: 0.75rem;
+  color: rgb(136, 57, 209);
   font-size: 1.2rem;
 }
 
-footer i {
-  font-size: 2rem;
-  color: var(--text-color-light);
+/*====  FOOTER ========================== */
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
 }
 
-footer .social {
-  grid-auto-flow: column;
-  width: fit-content;
+.footer p{
+  color: rgba(0 ,0 ,0 ,0.7);
+  font-size: 1rem;
+  text-align: left;
+  margin-bottom: -1.5rem;
+  margin-top: 1rem;
+  font-family: var(--tittle-font);
 }
 
-footer .social a {
-  transition: 0.3s;
-  display: inline-block;
+.footer .social-field{
+  padding: 0.4rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  width: 100%;
+  margin-top: 1rem;
 }
 
-footer .social a:hover {
-  transform: translateY(-8px);
+.footer .social-field a i {
+  margin: 0 0.5rem;
+  width: 15px;
 }
-  @media (min-width: 1200px) {
-    /* reusable classes */
-    .container {
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  
-    .section {
-      padding: 10rem 0;
-    }
-  
-    .section header {
-      max-width: 32rem;
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  
-    /* navigation */
-    nav .menu {
-      opacity: 1;
-      visibility: visible;
-      top: 0;
-    }
-  
-    nav .menu ul {
-      display: flex;
-      gap: 2rem;
-    }
-  
-    nav .menu ul li a.title {
-      font: 400 1rem var(--body-font);
-      -webkit-font-smoothing: antialiased;
-    }
-  
-    nav .menu ul li a.title.active {
-      font-weight: bold;
-      -webkit-font-smoothing: auto;
-    }
-  
-    /* layout */
-    main {
-      margin-top: var(--header-height);
-    }
+
+.footer .social-field a{
+  text-decoration: none;
+  color: white;
+}
+
+.footer .social-field.twitter{
+  background: linear-gradient(to right, #56a7f2, #468aca);
+}
+
+.footer .social-field.facebook{
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+/* Media Queries */
+@media (min-width: 1200px) {
+  /* reusable classes */
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  
-
-  @media (min-width: 767px) {
-    :root {
-      --tablet-subtitle-size: 1.25rem;
-    }
-  
-    /* Reusable Classes */
-    .container {
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  
-    .section {
-      padding: 10rem 0;
-    }
-  
-    #header .logo {
-      font-size: 1.5rem;
-    }
-  
-    .section header {
-      max-width: 32rem;
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  
-    /* Navigation */
-    nav .menu {
-      opacity: 1;
-      visibility: visible;
-      top: 0;
-    }
-  
-    nav .menu ul {
-      display: flex;
-      gap: 1rem;
-  
-      justify-content: end;
-      position: relative;
-      right: 1.5rem;
-    }
-  
-    nav .logo {
-      display: flex;
-  
-      justify-content: left;
-      position: relative;
-      left: 1.725rem;
-    }
-  
-    nav .menu ul li a.title {
-      font: 400 1rem var(--body-font);
-      -webkit-font-smoothing: antialiased;
-    }
-  
-    nav .menu ul li a.title.active {
-      font-weight: bold;
-      -webkit-font-smoothing: auto;
-    }
-    
-    /* Scheduling Form */
-
-    .field {
-      margin-top: 12rem;
-      margin-bottom: 8rem;
-    }
-
-    /* Footer */
-    footer.section {
-      padding: 3.75rem 0;
-    }
-  
-    footer .container {
-      grid-auto-flow: column;
-      align-items: center;
-      justify-content: space-between;
-    }
-  
-    footer .logo {
-      display: flex;
-      font-size: 1.5rem;
-  
-      justify-content: left;
-      position: relative;
-      left: 1.5rem;
-    }
-  
-    footer p {
-      font-size: 1rem;
-  
-      display: flex;
-  
-      justify-content: left;
-      position: relative;
-      left: 1.5rem;
-    }
-  
-    footer .social {
-      justify-content: end;
-      position: relative;
-      right: 4rem;
-    }
 }

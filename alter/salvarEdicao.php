@@ -19,7 +19,6 @@ if(isset($_POST['atualizar_admin']))
       $result = $conexao->query($sqlUpdate);  
 
       header ('Location: ../listar/listar_admin.php');
-
 }
 
 if(isset($_POST['atualizar_cliente']))
@@ -37,7 +36,6 @@ if(isset($_POST['atualizar_cliente']))
       $result = $conexao->query($sqlUpdate);  
 
       header ('Location: ../listar/listar_clientes.php');
-
 }
 
 if(isset($_POST['atualizar_cliente']))
@@ -55,7 +53,6 @@ if(isset($_POST['atualizar_cliente']))
       $result = $conexao->query($sqlUpdate);  
 
       header ('Location: ../listar/listar_clientes.php');
-
 }
 
 if(isset($_POST['atualizar_agendamento']))
@@ -65,7 +62,6 @@ if(isset($_POST['atualizar_agendamento']))
       $horario            = $_POST['horario'];
      
         
-
      // Tratando do tira risco
      if(!isset($_POST['tira_risco'])) {
       $tira_risco = 0;
@@ -108,17 +104,13 @@ if(isset($_POST['atualizar_agendamento']))
     }
 
    
-      
-  
-
       $sqlUpdate = "UPDATE servico SET tira_risco = '$tira_risco' ,revitalizacao_pintura = '$rev_pintura', polimento_cristalizado = '$pol_cristalizado', micro_pintura = '$micro_pint', polimento_farol = '$poli_farol', pintura_geral = ' $pint_geral', dia = '$dia',
        horario = '$horario' WHERE id = '$id' ";
 
       $result = $conexao->query($sqlUpdate);  
 
       header ('Location: ../listar/listar_agendamentos.php');
-
-}
+  }
 
 if(isset($_POST['atualizar_orcamento']))
 {
@@ -134,13 +126,4 @@ if(isset($_POST['atualizar_orcamento']))
       $result = $conexao->query($sqlUpdate);  
 
       header ('Location: ../listar/listar_orcamentos.php');
-
 }
-
-
-
-
-   
-    
-
-?>

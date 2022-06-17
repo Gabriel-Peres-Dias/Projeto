@@ -1,5 +1,7 @@
 <?php
-
+session_start();
+$id = $_GET['id'];
+echo $id;
 //reference the Dompdf namespace
 use Dompdf\Dompdf;
 require_once 'assets/dompdf/autoload.inc.php';
@@ -11,8 +13,7 @@ $dompdf = new Dompdf();
 $dompdf-> loadHtml('
 
 <! -- aqui entra o codigo html -->
-
-<h3> Teste PDF </h3>
+<p>Aqui vem</p>
 
 ');
 

@@ -1,7 +1,6 @@
 <?php
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="pt_BR">
   <head>
@@ -14,6 +13,18 @@ session_start();
     <link rel="stylesheet" href="assets/fonts/style.css" />
 
     <!-- STYLES -->
+    ¨
+    <!-- STYLES -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="../style/stylelogin.css" />
 
     <!-- FONTS -->
@@ -26,67 +37,92 @@ session_start();
 
   <body>
 
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="text-align: center;">
+  <div class="modal-dialog" role="document">
+   <div class="modal-content ">
+	  <div class="modal-header" style="height: 60px;">
+	   <h4 class="modal-title " id="exampleModalLongTitle">Erro!</h2>
+		<button type="button" class="close col-md-1" data-dismiss="modal" aria-label="Close">
+		<span aria-hidden="true">×</span>
+		</button>
+	  </div>
+	  <div class="modal-body">
+	   <h5>Email ou senha estão errados.</h5>
+	    </div>
+   </div>
+  </div>
+</div>
+<?php
+           if(!empty($_SESSION['sucesso'])){
+              echo "<script type='text/javascript'>
+              $(window).on('load',function(){
+              $('#myModal').modal('show'); });
+          </script>";
+              unset($_SESSION['sucesso']);
+            }
+          
+          ?>
+	    </div>
+   </div>
+  </div>
+</div>
+    
     <!-- Header -->
-    <header id="header">
-      <nav class="container">
-        <a class="logo" href="../home/home_administrador.php"
-          >mecânica<span>baiano</span>.</a
-        >
+    <main class="container">
+      <form action="../home/login.php" method="POST">
+        <h1>Login</h1>
 
-        <!-- MENU -->
-        <div class="dd-menu">
-          <ul>
-            <li><a href="../home/login.html">Início</a></li>
-            <li><a href="../cadastrar/cad_administrador.php">Cadastrar</a>
-            
-            </li>
-          </ul>
+        <div class="input-field">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Digite seu E-Mail"
+            required
+          />
+          <div class="underline"></div>
         </div>
-      </nav>
-    </header>
+        <div class="space"></div>
+        <div class="input-field">
+          <input
+            type="password"
+            name="senha"
+            id="password"
+            placeholder="Digite sua Senha"
+            required
+          />
 
-    <main>
-      <fieldset class="field">
-        <form action="../home/login.php" method="POST">
-          <h1>Acesso ao Sistema</h1>
+        
+          <div class="underline"></div>
+        </div>
+        <input class="button" type="submit" name="acao" value="Entrar" />
+      </form>
 
-          <label class="label-text" for="email"><strong>Email</strong></label>
-          <input class="label" type="email" name="email" required />
-
-          <label class="label-text" for="senha"><strong>Senha</strong></label>
-          <input class="label" type="password" name="senha" required />
-
-          <?php
-							if(!empty($_SESSION['erro'])){
-                echo "<p style='color: #f00;text-align: center '>".$_SESSION['erro']."</p>";
-								unset($_SESSION['erro']);
-							}
-					 ?>
-
-          <input class="button" type="submit" name="acao" value="Entrar" />
-        </form>
-      </fieldset>
+      <footer>
+        <div class="footer">
+          <p>Ou Cadastre</p>
+          <a href="../cadastrar/cad_administrador.php">
+            <input
+              class="button"
+              type="submit"
+              name="Cadastrar"
+              value="Cadastrar Administrador"
+            />
+          </a>
+          <div class="logo">
+            <a class="logo logo-alt" href="#home"
+              >mecânica<span>baiano</span>.</a
+            >
+          </div>
+        </div>
+      </footer>
     </main>
-
-    <footer class="section">
-      <div class="container grid">
-        <div class="brand">
-          <a class="logo logo-alt" href="#home">mecânica<span>baiano</span>.</a>
-          <p>©2022 mecânicaeverton.</p>
-          <p>Todos os direitos reservados.</p>
-        </div>
-
-        <div class="social grid">
-          <a
-            href="https://api.whatsapp.com/send?phone=+5561993398630&text=Oi! Gostaria de agendar um horário"
-            target="_blank"
-            ><i class="icon-whatsapp"></i
-          ></a>
-        </div>
-      </div>
-    </footer>
+    <script src="../bootstrap.min.js"></script>
   </body>
 
   <!-- main.js -->
   <script src="main.js"></script>
+  
 </html>

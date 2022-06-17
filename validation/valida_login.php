@@ -28,7 +28,7 @@ if ($total > 0) {
 	// TUDO OK! Agora, passa os dados para a sessão e redireciona o usuário
 	$_SESSION["id_usuario"] = $dados["id"];
 	$_SESSION["nome_usuario"] = stripslashes($dados["nome"]);
-	header("Location: ..home/home_administrador.php");
+	header("Location: ..home/index.php");
 } else {
 	"Senha inválida!";
 	exit;

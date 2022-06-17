@@ -27,8 +27,7 @@ if ($row == 1) {
     header('Location: ../home/index.php');
     exit();
 } else {
-    $url = 'http://localhost/projeto/home/home_administrador.php';
-    $_SESSION['erro'] = "<br>Login incorreto!";
-    echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=$url'>";
+    header('Location: #');
+    $_SESSION['sucesso'] = 1;
     exit();
 }

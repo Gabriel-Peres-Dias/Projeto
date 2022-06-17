@@ -9,9 +9,8 @@ ul {
   list-style: none;
 }
 
-a, a:focus, a:hover{
+a {
   text-decoration: none;
-  color: var(--title-color)
 }
 
 /*====  VARIABLES ============================ */
@@ -20,9 +19,9 @@ a, a:focus, a:hover{
 
   /* colors */
   --hue: 225;
-  
   /* HSL color mode */
   --base-color: hsl(var(--hue) 36% 57%);
+  --base-color-second: hsl(var(--hue) 65% 88%);
   --base-color-alt: hsl(var(--hue) 57% 53%);
   --title-color: hsl(var(--hue) 41% 10%);
   --text-color: hsl(0 0% 46%);
@@ -163,53 +162,26 @@ nav ul li a.active::after {
   display: inline-block;
 }
 
-/*====  SCHEDULING FORM =================== */
+/*====  SUB MENU ======================== */
 
-h1 {
-  color: var(--base-color);
-  padding-bottom: 2rem;
+.dd-menu ul ul{
+  display: none;
+  position: absolute;
+  left: 0;
 }
 
-.field {
-  border: 0;
+.dd-menu ul li:hover ul{
   display: block;
-  margin-top: 7rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 3rem 0;
-  width: 28%;
 }
 
-.label {
+.dd-menu ul ul {
+  width: 9.375rem;
+  padding-top: 1rem;
+}
+
+.dd-menu ul ul li a{
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 1.5rem;
-  border-radius: 5px 10px;
-  border-color: rgb(231, 234, 255);
-}
-
-.label:focus {
-  background: rgb(240, 243, 252);
-}
-
-.label-text {
-  margin-left: 5rem;
-}
-
-.button {
-  background-color: var(--base-color);
-  color: var(--text-color-light);
-  height: 3rem;
-  padding: 0 3rem;
-  border-radius: 0.25rem;
-  font: 500 1rem var(--body-font);
-  transition: background 0.3s;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  color: rgb(25, 3, 31);
 }
 
 /*====  FOOTER ========================== */
