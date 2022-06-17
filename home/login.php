@@ -28,6 +28,6 @@ if ($row == 1) {
     exit();
 } else {
     header('Location: #');
-    $_SESSION['sucesso'] = 1;
+    $_SESSION['erro'] = 1;
     exit();
 }

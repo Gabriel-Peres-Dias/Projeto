@@ -36,6 +36,25 @@ session_start();
   </head>
 
   <body>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+  <!-- Modal de criação de administrador -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="text-align: center;">
+  <div class="modal-dialog" role="document">
+   <div class="modal-content ">
+	  <div class="modal-header alert alert-success" style="height: 60px;">
+	   <h4 class="modal-title " id="exampleModalLongTitle">Cadastro de Administrador</h2>
+		<button type="button" class="close col-md-1" data-dismiss="modal" aria-label="Close">
+		<span aria-hidden="true">×</span>
+		</button>
+	  </div>
+	  <div class="modal-body">
+	   <h5>Administrador criado com sucesso!</h5>
+	    </div>
+   </div>
+  </div>
+</div>
     
     <!-- Header -->
     <main class="container">
@@ -68,12 +87,29 @@ session_start();
       </form>
 
       <?php
-           if(!empty($_SESSION['sucesso'])){
+           if(!empty($_SESSION['erro'])){
             echo "<br><p style='color: #f00; text-align: center;'>Login ou senha inválidos!</p>";
-              unset($_SESSION['sucesso']);
+              unset($_SESSION['erro']);
             }
           
           ?>
+
+<?php
+           if(!empty($_SESSION['erro'])){
+            echo "<br><p style='color: #f00; text-align: center;'>Login ou senha inválidos!</p>";
+              unset($_SESSION['erro']);
+            }
+          
+          ?>
+
+<?php           if(!empty($_SESSION['sucesso'])){
+              echo "<script type='text/javascript'>
+              $(window).on('load',function(){
+              $('#myModal').modal('show'); });
+          </script>";
+              unset($_SESSION['sucesso']);
+            }
+            ?>
 
       <footer>
         <div class="footer">
@@ -94,9 +130,11 @@ session_start();
         </div>
       </footer>
     </main>
+
   </body>
 
   <!-- main.js -->
   <script src="main.js"></script>
+  <script src="../bootstrap.min.js"></script>
   
 </html>

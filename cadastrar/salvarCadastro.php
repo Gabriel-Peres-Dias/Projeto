@@ -95,6 +95,7 @@ if (isset($_POST['cadastrar_administrador'])) {
     unset($_SESSIOn['erroN']);
     unset($_SESSIOn['erroE']);
     unset($_SESSIOn['erroT']);
+    $_SESSION['sucesso'] = 1;
 
     header('Location: ../home/home_administrador.php');
     exit();
