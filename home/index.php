@@ -35,7 +35,7 @@
             </button>
           </div>
           <div class='modal-body'>
-            *Ao sai da conta sua sessão será encerrada!
+            <p style='color: #f00;'>*Ao sair da conta sua sessão será encerrada!</p>
           </div>
           <div class='modal-footer'>
             <button type='button' class='btn btn-secondary ' data-dismiss='modal'>Fechar</button>

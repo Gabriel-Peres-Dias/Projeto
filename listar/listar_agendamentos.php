@@ -55,17 +55,18 @@
     mysqli_close($conexao);
     ?>
 
+<!-- Modal de Sucesso de agendamento -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="text-align: center;">
   <div class="modal-dialog" role="document">
    <div class="modal-content ">
-	  <div class="modal-header" style="height: 60px;">
-	   <h4 class="modal-title " id="exampleModalLongTitle">Sucesso!</h2>
+	  <div class="modal-header alert alert-success" style="height: 60px;">
+	   <h4 class="modal-title " id="exampleModalLongTitle">Agendamento de Serviço</h2>
 		<button type="button" class="close col-md-1" data-dismiss="modal" aria-label="Close">
 		<span aria-hidden="true">×</span>
 		</button>
 	  </div>
 	  <div class="modal-body">
-	   <h5>Agendamento marcado sem problemas.</h5>
+	   <h5>Agendamento marcado com sucesso!</h5>
 	    </div>
    </div>
   </div>
@@ -92,14 +93,14 @@
     <div class='modal fade' id='modalExemplo' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
       <div class='modal-dialog' role='document'>
         <div class='modal-content'>
-          <div class='modal-header'>
-            <h5 class='modal-title' id='exampleModalLabel'>Deseja realmente excluir o agendamento?</h5>
+          <div class='modal-header alert alert-danger'>
+            <h5 class='modal-title' id='exampleModalLabel'>Exclusão de Agendamento</h5>
             <button type='button' class='close' data-dismiss='modal' aria-label='Fechar'>
               <span aria-hidden='true'>&times;</span>
             </button>
           </div>
           <div class='modal-body'>
-            *Caso o agendamento tenha um orçamento ele também será excluído.
+            <p style='color: #f00;'>*Caso o agendamento tenha um orçamento ele também será excluído.</p>
           </div>
           <div class='modal-footer'>
             <button type='button' class='btn btn-secondary ' data-dismiss='modal'>Fechar</button>
