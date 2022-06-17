@@ -36,38 +36,6 @@ session_start();
   </head>
 
   <body>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="text-align: center;">
-  <div class="modal-dialog" role="document">
-   <div class="modal-content ">
-	  <div class="modal-header" style="height: 60px;">
-	   <h4 class="modal-title " id="exampleModalLongTitle">Erro!</h2>
-		<button type="button" class="close col-md-1" data-dismiss="modal" aria-label="Close">
-		<span aria-hidden="true">×</span>
-		</button>
-	  </div>
-	  <div class="modal-body">
-	   <h5>Email ou senha estão errados.</h5>
-	    </div>
-   </div>
-  </div>
-</div>
-<?php
-           if(!empty($_SESSION['sucesso'])){
-              echo "<script type='text/javascript'>
-              $(window).on('load',function(){
-              $('#myModal').modal('show'); });
-          </script>";
-              unset($_SESSION['sucesso']);
-            }
-          
-          ?>
-	    </div>
-   </div>
-  </div>
-</div>
     
     <!-- Header -->
     <main class="container">
@@ -93,12 +61,19 @@ session_start();
             placeholder="Digite sua Senha"
             required
           />
-
         
           <div class="underline"></div>
         </div>
         <input class="button" type="submit" name="acao" value="Entrar" />
       </form>
+
+      <?php
+           if(!empty($_SESSION['sucesso'])){
+            echo "<br><p style='color: #f00; text-align: center;'>Login ou senha inválidos!</p>";
+              unset($_SESSION['sucesso']);
+            }
+          
+          ?>
 
       <footer>
         <div class="footer">
@@ -119,7 +94,6 @@ session_start();
         </div>
       </footer>
     </main>
-    <script src="../bootstrap.min.js"></script>
   </body>
 
   <!-- main.js -->
