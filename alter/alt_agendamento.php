@@ -97,8 +97,6 @@ if (!empty($_GET['id'])) {
       <div class="custom-checkbox">
         <input type="checkbox" name="tira_risco" value="<?php echo $tira_risco; ?>" <?php echo  $tiraC  ?>>
         <label for="tira_risco"> Tira Risco </label>
-        <?php echo $tira_risco;
-        echo $tiraC; ?>
       </div>
 
       <div class="custom-checkbox">

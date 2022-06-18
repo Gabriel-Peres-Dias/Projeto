@@ -72,24 +72,74 @@ $dompdf = new Dompdf();
 $dompdf-> loadHtml('
 
 <! -- aqui entra o codigo html -->
-<h1>Dados do Corno </h1>
-<p>Nome do Corno: </p>'.$nome.'
-<br><p>CPF do Corno: </p>'.$cpf.'
-<br><p>E-mail do Corno: </p>'.$email.'
-<br><p>Telefone do Corno: </p>'.$telefone.'
-<br><p>Endereço do Corno: </p>'.$endereco.'
-<br><p>Dia que o Corno teve o carro arrumado: </p>'.$data.'
-<br><p>Horario que o Corno veio: </p>'.$horario.'
-<br><p>Valor o Corno teve que pagar: </p>'.$valor.'
-<br><p>Serviço(s) que o Corno fez: </p>'.$tiraRisco.
-$revitalizacaoPintura.
-$polimentoCristalizado.
-$microPintura.
-$polimentoFarol.
-$pinturaGeral.'
+<style type="text/css">
+td{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+</style>
 
+<h2>Lanternagem e pintura do Baiano</h2>
+<h2>Dados do Cliente</h2>
+<table border = 2px;  width="550">
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">CPF</th>
+            <th scope="col">E-mail</th>
+        </tr>
+        <tr>
+            <td width="33%">'.$nome.'</td>
+            <td width="33%">'.$cpf.'</td>
+            <td width="33%">'.$email.'</td> 
+        </tr>
+</table>
 
+<table border = 2px;  width="550">
+        <tr>
+            <th scope="col">Telefone</th>
+            <th scope="col">Endereço</th>
+        </tr>
+        <tr>
+        <td width="50%" text-align: center;>'.$telefone.'</td>
+        <td width="50%" text-align: center;>'.$endereco.'</td>
+        </tr>
+</table>
+<h2>Dados do Serviço</h2>
+<table border = 2px;  width="550">
+        <tr>
+            <th scope="col">Data</th>
+            <th scope="col">Horário</th>
+            <th scope="col">Valor</th>
+        </tr>
+        <tr>
+            <td width="25%" text-align: center;>'.$data.'</td>
+            <td width="25%" text-align: center;>'.$horario.'</td>
+            <td width="25%" text-align: center;>R$ '.$valor.'</td>
+        </tr>
+</table>
 
+<table border = 2px;  width="550">
+        <tr>
+            <th scope="col">Serviço(s)</th>
+        </tr>
+        <tr>
+            <td id="servico">'.$tiraRisco.
+            $revitalizacaoPintura.
+            $polimentoCristalizado.
+            $microPintura.
+            $polimentoFarol.
+            $pinturaGeral.'</td>
+          </tr>
+</table>
+
+    <h2>Contato e Localização</h2>
+        <p><br>Baiano Lanternagem e Pintura Josemir Soares Mendes
+        <br>Quadra 21 Conjunto A 35
+        <br>Parque da Barragem Setor 03
+        <br>Águas Lindas de Goiás GO
+        <br>72910-286</p>
 ');
 
 //Renderização do HTML
