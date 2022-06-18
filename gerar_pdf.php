@@ -79,34 +79,106 @@ td{
 h2{
     text-align: center;
 }
+
+
 </style>
 
-<h2>Lanternagem e pintura do Baiano</h2>
-<h2>Dados do Cliente</h2>
+<table border = 2px;  width="550">
+<tr>
+<th scope="col" text-align: center;><h4>Folha Orçamental</h4></th>
+</tr>
+</table>
+
+<table border = 2px;  width="550">
+<tr>
+<th scope="col" text-align: center; >Informações da empresa</th>
+</tr>
+</table>
+<table border = 2px;  width="550">
+        <tr>
+            <th scope="col">Nome fantasia</th>
+            <th scope="col">Razão social</th>
+            <th scope="col">CNPJ</th>
+        </tr>
+        <tr>
+            <td width="33%">Lanternagem e Pintura do Baiano</td>
+            <td width="33%">Josemir Soares Mendes</td>
+            <td width="33%" text-align: center;>38.062.042/0001-20</td>
+        </tr>
+</table>
+<table border = 2px;  width="550">
+<tr>
+<th scope="col" text-align: center; >Contatos</th>
+</tr>
+</table>
+<table border = 2px;  width="550">
+        <tr>
+            <th scope="col">E-mail</th>
+            <th scope="col">Telefone(s)</th>
+        </tr>
+        <tr>
+            <td width="33%">josemirsoaresmendes@gmail.com</td>
+            <td width="33%">(61) 99102-0180</td>
+        </tr>
+</table>
+<table border = 2px;  width="550">
+<tr>
+<th scope="col" text-align: center; >Localização</th>
+</tr>
+</table>
+<table border = 2px;  width="550">
+        <tr>
+            <th scope="col">Logradouro</th>
+            <th scope="col">Bairro</th>
+            <th scope="col">CEP</th>
+            <th scope="col">Município</th>
+        </tr>
+        <tr>
+            <td width="33%">Quadra 21 Conjunto A, 35</td>
+            <td width="33%"> Parque da Barragem Setor 03</td>
+            <td width="20%" text-align: center;>72910-286</td>
+            <td width="33%" text-align: center;>Águas Lindas de Goiás/Goiás</td>
+        </tr>
+</table>
+
+<table border = 2px;  width="550">
+<tr>
+<th scope="col" text-align: center; >Dados do Cliente</th>
+</tr>
+</table>
 <table border = 2px;  width="550">
         <tr>
             <th scope="col">Nome</th>
             <th scope="col">CPF</th>
-            <th scope="col">E-mail</th>
+            <th scope="col">Endereço</th>
         </tr>
         <tr>
             <td width="33%">'.$nome.'</td>
             <td width="33%">'.$cpf.'</td>
-            <td width="33%">'.$email.'</td> 
+            <td width="50%" text-align: center;>'.$endereco.'</td>
         </tr>
 </table>
-
+<table border = 2px;  width="550">
+<tr>
+<th scope="col" text-align: center;>Contatos do cliente</th>
+</tr>
+</table>
 <table border = 2px;  width="550">
         <tr>
             <th scope="col">Telefone</th>
-            <th scope="col">Endereço</th>
+            <th scope="col">E-mail</th>
         </tr>
         <tr>
         <td width="50%" text-align: center;>'.$telefone.'</td>
-        <td width="50%" text-align: center;>'.$endereco.'</td>
+        <td width="50%" text-align: center;>'.$email.'</td>
         </tr>
 </table>
-<h2>Dados do Serviço</h2>
+</table>
+<table border = 2px;  width="550">
+<tr>
+<th scope="col" text-align: center;>Infomações do Serviço</th>
+</tr>
+</table>
 <table border = 2px;  width="550">
         <tr>
             <th scope="col">Data</th>
@@ -134,12 +206,7 @@ h2{
           </tr>
 </table>
 
-    <h2>Contato e Localização</h2>
-        <p><br>Baiano Lanternagem e Pintura Josemir Soares Mendes
-        <br>Quadra 21 Conjunto A 35
-        <br>Parque da Barragem Setor 03
-        <br>Águas Lindas de Goiás GO
-        <br>72910-286</p>
+    
 ');
 
 //Renderização do HTML
