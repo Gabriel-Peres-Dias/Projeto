@@ -17,15 +17,47 @@ if (!empty($_GET['id'])) {
   if ($result->num_rows > 0) {
     while ($user_data = mysqli_fetch_assoc($result)) {
 
-      $nome    = $user_data['nomeC'];
-      /*$tira_risco = $user_data['tira_risco'];
+            $nome    = $user_data['nomeC'];
+            $tira_risco = $user_data['tira_risco'];
             $rev_pint = $user_data['revitalizacao_pintura'];
             $pol_cristalizado = $user_data['polimento_cristalizado'];
             $micro_pint = $user_data['micro_pintura'];
             $pol_farol = $user_data['polimento_farol'];
-            $pint_geral = $user_data['pintura_geral'];*/
-      $valor   = $user_data['valor'];
-      $dia        = $user_data['dia'];
+            $pint_geral = $user_data['pintura_geral'];      
+            $valor   = $user_data['valor'];
+            $dia        = $user_data['dia'];
+
+            if ($user_data['tira_risco'] == 1) {
+              $tiraC = "checked" ;
+            } else {
+              $tiraC = "";
+            }
+            if ($user_data['revitalizacao_pintura'] == 1) {
+              $revC = "checked" ;
+            } else {
+              $revC = "";
+            }
+            if ($user_data['polimento_cristalizado'] == 1) {
+              $polC = "checked" ;
+            }else {
+              $polC = "";
+            }
+            if ($user_data['micro_pintura'] == 1) {
+              $micC = "checked" ;
+            } else {
+              $micC = "";
+            }
+            if ($user_data['polimento_farol'] == 1) {
+              $polfC = "checked" ;
+            } else {
+              $polfC = "";
+            }
+            if ($user_data['pintura_geral'] == 1) {
+              $pintC = "checked" ;
+            }else {
+              $pintC = "";
+            }
+
     }
   } else {
     header('Location: ../listar/listar_orcamento.php');
@@ -73,6 +105,27 @@ if (!empty($_GET['id'])) {
           <div class="underline"></div>
         </div>
         <div class="space"></div>
+
+        <label class="label-text" ><strong>Tipos de Serviço</strong></label>
+          
+          <br><input type = "checkbox"  name = "tira_risco" value = "<?php  echo $tira_risco; ?>" <?php echo  $tiraC  ?> disabled="" >
+          <label for = "tira_risco"> Tira Risco </label>
+  
+
+          <br><input type = "checkbox"  name = "revitalizacao_pintura" value = "<?php echo $rev_pint; ?>" <?php echo $revC    ?> disabled="">
+          <label for = "revitalizacao_pintura"> Revitalização de Pintura </label>
+
+          <br><input type = "checkbox"  name = "polimento_cristalizado" value = "<?php echo $pol_cristalizado; ?>" <?php  echo $polC ?> disabled="">
+          <label for = "polimento_cristalizado"> Polimento Cristalizado </label>
+
+          <br><input type = "checkbox"  name = "micro_pintura" value = "<?php echo $micro_pint; ?>" <?php  echo $micC ?> disabled="">
+          <label for = "micro_pintura"> Micro Pintura </label>
+
+          <br><input type = "checkbox"  name = "polimento_farol" value = "<?php echo $pol_farol; ?>" <?php echo $polfC  ?> disabled="">
+          <label for = "polimento_farol"> Polimento de Farol </label>
+
+          <br><input type = "checkbox"  name = "pintura_geral" value = "<?php echo $pint_geral; ?>" <?php echo $pintC   ?> disabled="">
+          <label for = "pintura_geral"> Pintura Geral </label><br>
 
         <label class="label-text-data" for="dia"><strong>Data</strong></label>
 

@@ -93,57 +93,19 @@ if (!empty($_GET['id'])) {
       </div>
 
 
-      <div class="select-box">
-        <div class="options-container" id="horario">
-          <div class="option">
-            <input class="radio" type="radio" id="h1" name="horario-1">
-            <label for="horario-1">08:00</label>
-          </div>
-
-          <div class="option">
-            <input class="radio" type="radio" id="h2" name="horario-2">
-            <label for="horario-2">09:00</label>
-          </div>
-
-          <div class="option">
-            <input class="radio" type="radio" id="h3" name="horario-3">
-            <label for="horario-3">10:00</label>
-          </div>
-
-          <div class="option">
-            <input class="radio" type="radio" id="h4" name="horario-4">
-            <label for="horario-4">11:00</label>
-          </div>
-
-          <div class="option">
-            <input class="radio" type="radio" id="h5" name="horario-5">
-            <label for="horario-5">12:00</label>
-          </div>
-
-          <div class="option">
-            <input class="radio" type="radio" id="h6" name="horario-6">
-            <label for="horario-6">14:00</label>
-          </div>
-
-          <div class="option">
-            <input class="radio" type="radio" id="h7" name="horario-7">
-            <label for="horario-7">15:00</label>
-          </div>
-
-          <div class="option">
-            <input class="radio" type="radio" id="h8" name="horario-8">
-            <label for="horario-8">16:00</label>
-          </div>
-
-          <div class="option">
-            <input class="radio" type="radio" id="h9" name="horario-9">
-            <label for="horario-9">17:00</label>
-          </div>
-        </div>
-        <div class="selected">
-          Escolha um Horário
-        </div>
-      </div>
+      <label class="label-text" for="horario"><strong>Horário</strong></label>
+        <select class="label-select-service" name="horario" id="horario" required>
+          <option value="">Escolha</option>
+          <option value="08:00">08:00</option>
+          <option value="09:00">09:00</option>
+          <option value="10:00">10:00</option>
+          <option value="11:00">11:00</option>
+          <option value="12:00">12:00</option>
+          <option value="14:00">14:00</option>
+          <option value="15:00">15:00</option>
+          <option value="16:00">16:00</option>
+          <option value="17:00">17:00</option>
+        </select>
 
       <?php
       if (!empty($_SESSION['horario_uso'])) {
@@ -154,11 +116,11 @@ if (!empty($_GET['id'])) {
 
       <label class="label-text" for="dia"><strong>Data</strong></label>
       <input class="label" type="date" name="dia" <?php
-                                                  if (!empty($_SESSION['value_dia'])) {
-                                                    echo "value='" . $_SESSION['value_dia'] . "'";
-                                                    unset($_SESSION['value_dia']);
-                                                  }
-                                                  ?> required />
+        if (!empty($_SESSION['value_dia'])) {
+           echo "value='" . $_SESSION['value_dia'] . "'";
+           unset($_SESSION['value_dia']);
+         }
+         ?> required />
 
       <input class="label" type="hidden" name="id" value=" <?php echo  $id ?>" required />
 
