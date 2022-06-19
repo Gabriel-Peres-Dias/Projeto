@@ -74,7 +74,7 @@ if (!empty($_GET['id'])) {
   <!-- Page Info -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cadastro de Orçamento</title>
+  <title>Editar Orçamento</title>
 
   <!-- Icons -->
   <link rel="stylesheet" href="assets/fonts/style.css" />
@@ -142,6 +142,7 @@ if (!empty($_GET['id'])) {
 </div>
 
         <div class="input-field">
+        <label class="label-text" for="dia"><strong><BR>Data:</strong></label>
           <input class="label" type="date" name="dia" value="<?php echo  $dia ?>" disabled="" required />
           <div class="underline"></div>
         </div>
