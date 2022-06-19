@@ -92,6 +92,13 @@ if (!empty($_GET['id'])) {
         <label for="pintura_geral">Pintura Geral</label>
       </div>
 
+      <?php
+      if (!empty($_SESSION['servico_limpo'])) {
+        echo "<p style='color: #f00; '>" . $_SESSION['servico_limpo'] . "</p>";
+        unset($_SESSION['servico_limpo']);
+      }
+      ?>
+
 
       <label class="label-text" for="horario"><strong>Horário</strong></label>
         <select class="label-select-service" name="horario" id="horario" required>

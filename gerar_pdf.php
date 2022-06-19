@@ -11,7 +11,8 @@ $resultado = mysqli_query($conexao, "SELECT orcamento.id, cliente.nomeC, cliente
  micro_pintura,polimento_farol,pintura_geral, dia,horario, orcamento.valor
 FROM servico
 INNER JOIN orcamento on orcamento.servico_id = servico.id
-INNER JOIN cliente on servico.cliente_id = cliente.id WHERE orcamento.id = '$id'
+INNER JOIN cliente on servico.cliente_id = cliente.id
+ WHERE orcamento.id = '$id'
 ");
 
 while ($user_data = mysqli_fetch_assoc($resultado)) {
@@ -85,7 +86,7 @@ h2{
 
 <table border = 2px;  width="550">
 <tr>
-<th scope="col" text-align: center;><h4>Folha Orçamental</h4></th>
+<th scope="col" text-align: center;><h4>Folha de Orçamento</h4></th>
 </tr>
 </table>
 

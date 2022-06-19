@@ -142,7 +142,7 @@ if (isset($_POST['cadastrar_cliente'])) {
     $url = 'http://localhost/projeto/cadastrar/cad_cliente.php';
     $_SESSION['cpf_uso'] = "O CPF já está em uso<br>";
     $_SESSION['erroCPF'] = 1;
-    echo "<META HTTP-EQUIV=REFRESH CONTENT = '10;URL=$url'>";
+    echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=$url'>";
   } else {
     $_SESSION['value_cpf'] = $_POST['cpf'];
     $_SESSION['erroCPF'] = 0;
@@ -152,7 +152,7 @@ if (isset($_POST['cadastrar_cliente'])) {
     $url = 'http://localhost/projeto/cadastrar/cad_cliente.php';
     $_SESSION['nomeC_uso'] = "O Nome já está em uso<br>";
     $_SESSION['erroN'] = 1;
-    echo "<META HTTP-EQUIV=REFRESH CONTENT = '10;URL=$url'>";
+    echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=$url'>";
   } else {
     $_SESSION['value_nomeC'] = $_POST['nome'];
     $_SESSION['erroN'] = 0;
@@ -162,7 +162,7 @@ if (isset($_POST['cadastrar_cliente'])) {
     $url = 'http://localhost/projeto/cadastrar/cad_cliente.php';
     $_SESSION['emailC_uso'] = "O E-mail já está em uso<br>";
     $_SESSION['erroE'] = 1;
-    echo "<META HTTP-EQUIV=REFRESH CONTENT = '10;URL=$url'>";
+    echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=$url'>";
   } else {
     $_SESSION['value_emailC'] = $_POST['email'];
     $_SESSION['erroE'] = 0;
@@ -172,7 +172,7 @@ if (isset($_POST['cadastrar_cliente'])) {
     $url = 'http://localhost/projeto/cadastrar/cad_cliente.php';
     $_SESSION['telefoneC_uso'] = "O telefone já está em uso<br>";
     $_SESSION['erroT'] = 1;
-    echo "<META HTTP-EQUIV=REFRESH CONTENT = '10;URL=$url'>";
+    echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=$url'>";
   } else {
     $_SESSION['value_telefoneC'] = $_POST['telefone'];
     $_SESSION['erroT'] = 0;
@@ -258,6 +258,16 @@ if (isset($_POST['cadastrar_agendamento'])) {
     $pint_geral = $_POST['pintura_geral'];
   }
 
+  if($tira_risco === 0 AND $rev_pintura === 0 
+  AND $pol_cristalizado === 0 AND $micro_pint === 0
+   AND $poli_farol === 0 AND $pint_geral === 0){
+    $_SESSION['servico_limpo'] = "O Serviço não pode ser vazio<br>";
+    echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=http://localhost/projeto/cadastrar/cad_agendamento.php?id=$id'>";
+    $_SESSION['erro_servico'] = 1;
+  } Else {
+    $_SESSION['erro_servico'] = 0;
+  }
+
   // Buscar se o dia e horario  já foram cadastrados ou não
   $query = ("SELECT dia, horario FROM servico WHERE dia = '$dia' AND horario = '$horario'");
   $result = mysqli_query($conexao, $query);
@@ -272,7 +282,7 @@ if (isset($_POST['cadastrar_agendamento'])) {
     $_SESSION['erroH'] = 0;
   }
 
-  if ($_SESSION['erroH'] == 0) {
+  if ($_SESSION['erroH'] == 0 AND $_SESSION['erro_servico'] == 0) {
     // Query de inserção de dados no banco
     $sql = "INSERT INTO servico(tira_risco,revitalizacao_pintura, polimento_cristalizado, micro_pintura, polimento_farol, pintura_geral,horario,dia, cliente_id) VALUES ";
     $sql .= "('$tira_risco','$rev_pintura','$pol_cristalizado', '$micro_pint', '$poli_farol', '$pint_geral' ,'$horario','$dia', '$id')";
