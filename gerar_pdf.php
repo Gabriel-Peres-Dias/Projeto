@@ -11,7 +11,7 @@ $resultado = mysqli_query($conexao, "SELECT orcamento.id, cliente.nomeC, cliente
  micro_pintura,polimento_farol,pintura_geral, dia,horario, orcamento.valor
 FROM servico
 INNER JOIN orcamento on orcamento.servico_id = servico.id
-INNER JOIN cliente on servico.cliente_id = cliente.id;
+INNER JOIN cliente on servico.cliente_id = cliente.id WHERE orcamento.id = '$id'
 ");
 
 while ($user_data = mysqli_fetch_assoc($resultado)) {
