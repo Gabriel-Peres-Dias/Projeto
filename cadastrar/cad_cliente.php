@@ -22,7 +22,10 @@ session_start();
 </head>
 
 <body>
-  <main class="container">
+
+
+
+<main class="container">
     <!-- Form -->
     <form action="../cadastrar/salvarCadastro.php" method="POST">
       <h1>Cadastro de Cliente</h1>
@@ -111,7 +114,7 @@ session_start();
     <footer>
       <div class="footer">
         <div class="logo">
-          <a class="logo logo-alt" href="#home">mecânica<span>baiano</span>.</a>
+          <a class="logo logo-alt" href="../home/index.php">mecânica<span>baiano</span>.</a>
         </div>
       </div>
     </footer>

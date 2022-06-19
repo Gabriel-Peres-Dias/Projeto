@@ -60,37 +60,37 @@ if (!empty($_GET['id'])) {
         <h1 class="title-form">Editar Cliente</h1>
 
         <div class="input-field">
-          <input class="label" type="text" name="nome" value=" <?php echo  $nome ?>" required />
+          <input class="label" type="text" name="nome" value="<?php echo$nome ?>" required />
           <div class="underline"></div>
         </div>
         <div class="space"></div>
 
         <div class="input-field">
-          <input class="label" type="email" name="email" value=" <?php echo  $email ?>" required />
+          <input class="label" type="email" name="email" value="<?php echo  $email ?>" required />
           <div class="underline"></div>
         </div>
         <div class="space"></div>
 
         <div class="input-field">
-          <input class="label" type="text" name="cpf" value=" <?php echo  $cpf ?>"/>
+          <input class="label" type="text" name="cpf" value="<?php echo  $cpf ?>"/>
           <div class="underline"></div>
         </div>
         <div class="space"></div>
 
         <div class="input-field">
-          <input class="label" type="text" name="endereco" value=" <?php echo  $endereco ?>" required />
+          <input class="label" type="text" name="endereco" value="<?php echo  $endereco ?>" required />
           <div class="underline"></div>
         </div>
         <div class="space"></div>
 
         <div class="input-field">
-          <input class="label" type="text" name="telefone" value=" <?php echo  $telefone ?>"/>
+          <input class="label" type="text" name="telefone" value="<?php echo  $telefone ?>"/>
           <div class="underline"></div>
         </div>
         <div class="space"></div>
 
         <div class="input-field">
-          <input class="label" type="hidden" name="id" value=" <?php echo  $id ?>" required />
+          <input class="label" type="hidden" name="id" value="<?php echo  $id ?>" required />
         </div>
 
         <input class="button" type="submit" name="atualizar_cliente" value="Editar" />

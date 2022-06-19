@@ -73,11 +73,11 @@ session_start();
 
         <div class="input-field">
           <input class="label" type="text" name="email" placeholder="Email" <?php
-                                                                            if (!empty($_SESSION['value_email'])) {
-                                                                              echo "value='" . $_SESSION['value_email'] . "'";
-                                                                              unset($_SESSION['value_email']);
-                                                                            }
-                                                                            ?> required />
+          if (!empty($_SESSION['value_email'])) {
+            echo "value='" . $_SESSION['value_email'] . "'";
+            unset($_SESSION['value_email']);
+          }
+          ?> required />
 
           <?php
           if (!empty($_SESSION['email_uso'])) {
@@ -119,7 +119,7 @@ session_start();
     <footer>
       <div class="footer">
         <div class="logo">
-          <a class="logo logo-alt" href="#home">mecânica<span>baiano</span>.</a>
+          <a class="logo ">mecânica<span>baiano</span>.</a>
         </div>
       </div>
     </footer>

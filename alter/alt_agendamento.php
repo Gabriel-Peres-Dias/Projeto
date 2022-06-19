@@ -92,40 +92,48 @@ if (!empty($_GET['id'])) {
     <h1>Editar Agendamento</h1>
     <form action="../alter/salvarEdicao.php" method="POST">
 
+    <label for="cliente_nome" class="label-text"><strong>Nome do Cliente</strong></label>
+
+        <div class="input-field">
+          <input class="label" type="text" name="cliente_nome" value=" <?php echo  $nome ?>" disabled="" required />
+          <div class="underline"></div>
+        </div>
+        <div class="space"></div>
+
       <label class="label-text"><strong>Tipos de Serviço</strong></label>
 
       <div class="custom-checkbox">
-        <input type="checkbox" name="tira_risco" value="<?php echo $tira_risco; ?>" <?php echo  $tiraC  ?>>
-        <label for="tira_risco"> Tira Risco </label>
+        <input id="tira_risco" type="checkbox" name="tira_risco" value="<?php  echo $tira_risco; ?>" <?php echo  $tiraC  ?>>
+        <label for="tira_risco">Tira Risco</label>
       </div>
 
       <div class="custom-checkbox">
-        <input type="checkbox" name="revitalizacao_pintura" value="<?php echo $rev_pint; ?>" <?php echo $revC    ?>>
-        <label for="revitalizacao_pintura"> Revitalização de Pintura </label>
+        <input id="revitalizacao_pintura" type="checkbox" name="revitalizacao_pintura" value= "<?php echo $rev_pint; ?>" <?php echo $revC    ?>>
+        <label for="revitalizacao_pintura">Revitalização de Pintura</label>
       </div>
 
       <div class="custom-checkbox">
-        <input type="checkbox" name="polimento_cristalizado" value="<?php echo $pol_cristalizado; ?>" <?php echo $polC ?>>
-        <label for="polimento_cristalizado"> Polimento Cristalizado </label>
+        <input id="polimento_cristalizado" type="checkbox" name="polimento_cristalizado" value= "<?php echo $pol_cristalizado; ?>" <?php  echo $polC ?>>
+        <label for="polimento_cristalizado">Polimento Cristalizado</label>
       </div>
 
       <div class="custom-checkbox">
-        <input type="checkbox" name="micro_pintura" value="<?php echo $micro_pint; ?>" <?php echo $micC ?>>
-        <label for="micro_pintura"> Micro Pintura </label>
+        <input id="micro_pintura" type="checkbox" name="micro_pintura" value= "<?php echo $micro_pint; ?>" <?php  echo $micC ?> >
+        <label for="micro_pintura">Micro Pintura</label>
       </div>
 
       <div class="custom-checkbox">
-        <input type="checkbox" name="polimento_farol" value="<?php echo $pol_farol; ?>" <?php echo $polfC  ?>>
-        <label for="polimento_farol"> Polimento de Farol </label>
+        <input id="polimento_farol" type="checkbox" name="polimento_farol" value= "<?php echo $pol_farol; ?>" <?php echo $polfC  ?>>
+        <label for="polimento_farol">Polimento de Farol</label>
       </div>
 
       <div class="custom-checkbox">
-        <input type="checkbox" name="pintura_geral" value="<?php echo $pint_geral; ?>" <?php echo $pintC   ?>>
-        <label for="pintura_geral"> Pintura Geral </label><br>
+        <input id="pintura_geral" type="checkbox" name="pintura_geral" value= "<?php echo $pint_geral; ?>" <?php echo $pintC   ?>>
+        <label for="pintura_geral">Pintura Geral</label>
       </div>
 
       <label class="label-text" for="horario"><strong>Horário</strong></label>
-        <select class="label-select-service" name="horario" id="horario" value =" <?php echo  $horario ?>"  required>
+        <select class="label-select-service" name="horario" id="horario" value ="<?php echo  $horario ?>"  required>
           <option value="">Escolha</option>
           <option value="08:00" <?=($horario == '08:00:00')?'selected':''?>>08:00</option>
           <option value="09:00" <?=($horario == '09:00:00')?'selected':''?>>09:00</option>

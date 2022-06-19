@@ -60,44 +60,44 @@ if (!empty($_GET['id'])) {
 
         <h1>Editar Administrador</h1>
         <div class="input-field">
-          <input class="label" type="text" name="matricula" value=" <?php echo  $matricula ?>" required />
+          <input class="label" type="text" name="matricula" value="<?php echo $matricula ?>" required />
           <div class="underline"></div>
         </div>
         <div class="space"></div>
 
         <div class="input-field">
-          <input class="label" type="text" name="nome" value=" <?php echo  $nome ?>" required />
+          <input class="label" type="text" name="nome" value="<?php echo $nome ?>" required />
           <div class="underline"></div>
         </div>
         <div class="space"></div>
 
         <div class="input-field">
-          <input class="label" type="text" name="endereco" value=" <?php echo  $endereco ?>" required />
+          <input class="label" type="text" name="endereco" value="<?php echo $endereco ?>" required />
           <div class="underline"></div>
         </div>
         <div class="space"></div>
 
         <div class="input-field">
-          <input class="label" type="text" name="email" value=" <?php echo  $email ?>" required />
+          <input class="label" type="text" name="email" value="<?php echo$email ?>" required />
           <div class="underline"></div>
         </div>
         <div class="space"></div>
 
         <div class="input-field">
-          <input class="label" type="text" name="telefone" value=" <?php echo  $telefone ?>"/>
+          <input class="label" type="text" name="telefone" value="<?php echo$telefone ?>"/>
           <div class="underline"></div>
         </div>
         <div class="space"></div>
 
         <div class="input-field">
-          <input class="label" type="text" name="senha" value=" <?php echo  $senha ?>" required />
+          <input class="label" type="text" name="senha" value="<?php echo$senha ?>" required />
           <div class="underline"></div>
         </div>
         <div class="space"></div>
 
-        <input class="label" type="hidden" name="id" value=" <?php echo  $id ?>" required />
+        <input class="label" type="hidden" name="id" value="<?php echo$id ?>" required />
 
-        <input class="button" type="submit" value="Atualizar" name="atualizar_admin" />
+        <input class="button" type="submit" value="Editar" name="atualizar_admin" />
       </div>
     </form>
   </main>

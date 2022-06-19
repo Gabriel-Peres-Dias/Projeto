@@ -81,6 +81,7 @@ if (!empty($_GET['id'])) {
 
   <!-- Styles -->
   <link rel="stylesheet" href="../style/stylealtorc.css" />
+  <link rel="stylesheet" href="../style/styleagendamento.css" />
 
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -108,26 +109,37 @@ if (!empty($_GET['id'])) {
 
         <label class="label-text" ><strong>Tipos de Serviço</strong></label>
           
-          <br><input type = "checkbox"  name = "tira_risco" value = "<?php  echo $tira_risco; ?>" <?php echo  $tiraC  ?> disabled="" >
-          <label for = "tira_risco"> Tira Risco </label>
-  
+        <label class="label-text"><strong>Tipos de Serviço</strong></label>
 
-          <br><input type = "checkbox"  name = "revitalizacao_pintura" value = "<?php echo $rev_pint; ?>" <?php echo $revC    ?> disabled="">
-          <label for = "revitalizacao_pintura"> Revitalização de Pintura </label>
+<div class="custom-checkbox">
+  <input id="tira_risco" type="checkbox" name="tira_risco" disabled="" value="<?php  echo $tira_risco; ?>" <?php echo  $tiraC  ?> >
+  <label for="tira_risco">Tira Risco</label>
+</div>
 
-          <br><input type = "checkbox"  name = "polimento_cristalizado" value = "<?php echo $pol_cristalizado; ?>" <?php  echo $polC ?> disabled="">
-          <label for = "polimento_cristalizado"> Polimento Cristalizado </label>
+<div class="custom-checkbox">
+  <input id="revitalizacao_pintura" type="checkbox" name="revitalizacao_pintura" disabled="" value= "<?php echo $rev_pint; ?>" <?php echo $revC    ?>>
+  <label for="revitalizacao_pintura">Revitalização de Pintura</label>
+</div>
 
-          <br><input type = "checkbox"  name = "micro_pintura" value = "<?php echo $micro_pint; ?>" <?php  echo $micC ?> disabled="">
-          <label for = "micro_pintura"> Micro Pintura </label>
+<div class="custom-checkbox">
+  <input id="polimento_cristalizado" type="checkbox" name="polimento_cristalizado" disabled="" value= "<?php echo $pol_cristalizado; ?>" <?php  echo $polC ?>>
+  <label for="polimento_cristalizado">Polimento Cristalizado</label>
+</div>
 
-          <br><input type = "checkbox"  name = "polimento_farol" value = "<?php echo $pol_farol; ?>" <?php echo $polfC  ?> disabled="">
-          <label for = "polimento_farol"> Polimento de Farol </label>
+<div class="custom-checkbox">
+  <input id="micro_pintura" type="checkbox" name="micro_pintura" disabled="" value= "<?php echo $micro_pint; ?>" <?php  echo $micC ?> >
+  <label for="micro_pintura">Micro Pintura</label>
+</div>
 
-          <br><input type = "checkbox"  name = "pintura_geral" value = "<?php echo $pint_geral; ?>" <?php echo $pintC   ?> disabled="">
-          <label for = "pintura_geral"> Pintura Geral </label><br>
+<div class="custom-checkbox">
+  <input id="polimento_farol" type="checkbox" name="polimento_farol" disabled="" value= "<?php echo $pol_farol; ?>" <?php echo $polfC  ?>>
+  <label for="polimento_farol">Polimento de Farol</label>
+</div>
 
-        <label class="label-text-data" for="dia"><strong>Data</strong></label>
+<div class="custom-checkbox">
+  <input id="pintura_geral" type="checkbox" name="pintura_geral" disabled="" value= "<?php echo $pint_geral; ?>" <?php echo $pintC   ?>>
+  <label for="pintura_geral">Pintura Geral</label>
+</div>
 
         <div class="input-field">
           <input class="label" type="date" name="dia" value="<?php echo  $dia ?>" disabled="" required />
