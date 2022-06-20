@@ -78,7 +78,7 @@ if (!empty($_GET['id'])) {
         <div class="space"></div>
 
         <div class="input-field">
-          <input class="label" type="text" name="email" value="<?php echo$email ?>" required />
+          <input class="label" type="email" name="email" value="<?php echo$email ?>" required />
           <div class="underline"></div>
         </div>
         <div class="space"></div>
