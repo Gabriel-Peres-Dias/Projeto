@@ -72,7 +72,7 @@ session_start();
         <div class="space"></div>
 
         <div class="input-field">
-          <input class="label" type="text" name="email" placeholder="Email" <?php
+          <input class="label" type="email" name="email" placeholder="Email" <?php
           if (!empty($_SESSION['value_email'])) {
             echo "value='" . $_SESSION['value_email'] . "'";
             unset($_SESSION['value_email']);
