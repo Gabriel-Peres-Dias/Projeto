@@ -48,7 +48,7 @@
     include "../validation/conn.php";
     require "../validation/verifica.php";
 
-    $resultado = mysqli_query($conexao, "SELECT * FROM cliente");
+    $resultado = mysqli_query($conexao, "SELECT * FROM cliente ORDER BY nomeC asc");
 
     mysqli_close($conexao);
 

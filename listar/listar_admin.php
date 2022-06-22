@@ -46,7 +46,7 @@
     include "../validation/conn.php";
     require "../validation/verifica.php";
 
-    $sql = "SELECT * FROM usuario ORDER BY id ASC";
+    $sql = "SELECT * FROM usuario ORDER BY nome ASC";
     $resultado = $conexao->query($sql);
 
     mysqli_close($conexao);

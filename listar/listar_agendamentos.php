@@ -160,7 +160,7 @@
       </table>
     </div>
 
-    <!--<footer class="section">
+    <footer class="section">
       <div class="container grid">
         <div class="brand">
           <a class="logo logo-alt" href="#home">mecânica<span>baiano</span>.</a>
@@ -168,7 +168,7 @@
           <p>Todos os direitos reservados.</p>
         </div>
       </div>
-    </footer>-->
+    </footer>-
   </main>
 </body>
 <!-- main.js -->

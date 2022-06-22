@@ -32,7 +32,7 @@ session_start();
               echo "value='" . $_SESSION['value_matricula'] . "'";
               unset($_SESSION['value_matricula']);
             }
-           ?> required maxlength="6"/>
+           ?> required minlength="3"maxlength="6"/>
           <?php
           if (!empty($_SESSION['matricula_uso'])) {
             echo "<p style='color: #f00; '>" . $_SESSION['matricula_uso'] . "</p>";
@@ -95,7 +95,7 @@ if (!empty($_SESSION['value_endereco'])) {
             echo "value='" . $_SESSION['value_telefone'] . "'";
             unset($_SESSION['value_telefone']);
           }
-           ?> required minlength="11" maxlength="11" />
+           ?> required pattern="[0-9]{11}" minlength="11" maxlength="11" />
 
           <?php
           if (!empty($_SESSION['telefone_uso'])) {

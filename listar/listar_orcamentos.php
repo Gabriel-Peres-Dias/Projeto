@@ -171,7 +171,7 @@
   </div>
 </main>
 
-<!--<footer class="section">
+<footer class="section">
   <div class="container grid">
     <div class="brand">
       <a class="logo logo-alt" href="#home">mecânica<span>baiano</span>.</a>
@@ -183,7 +183,7 @@
       <a href="https://api.whatsapp.com/send?phone=+5561993398630&text=Oi! Gostaria de agendar um horário" target="_blank"><i class="icon-whatsapp"></i></a>
     </div>
   </div>
-</footer>-->
+</footer>-
 
 </body>
 <!-- main.js -->
