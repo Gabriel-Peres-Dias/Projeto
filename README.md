@@ -12,7 +12,7 @@ Desenvolver um sistema interno que auxilie no sistema de agendamento de ordens d
 
 ## Status do Projeto
 
-Em desenvolvimento. Porém, já se encontra na fase final.
+Concluído.
 
 ## Funcionalidades do projeto
 
