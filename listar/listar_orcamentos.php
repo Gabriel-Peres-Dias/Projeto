@@ -87,7 +87,7 @@
           <th scope="col">Valor</th>
           <th scope="col">Editar</th>
           <th scope="col">Excluir</th>
-          <th scope="col">Nota Fiscal</th>
+          <th scope="col">Ordem de Serviço</th>
         </tr>
       </thead>
       <tbody>

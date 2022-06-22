@@ -86,7 +86,7 @@ h2{
 
 <table border = 2px;  width="550">
 <tr>
-<th scope="col" text-align: center;><h4>Folha de Orçamento</h4></th>
+<th scope="col" text-align: center;><h4>Ordem de Serviço</h4></th>
 </tr>
 </table>
 

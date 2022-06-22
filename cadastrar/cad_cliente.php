@@ -65,11 +65,11 @@ session_start();
       <div class="space"></div>
       <div class="input-field">
         <input class="label" type="text" name="cpf" placeholder="CPF" <?php
-                                                                      if (!empty($_SESSION['value_cpf'])) {
-                                                                        echo "value='" . $_SESSION['value_cpf'] . "'";
-                                                                        unset($_SESSION['value_cpf']);
-                                                                      }
-                                                                      ?> required minlength="11" maxlength="11" />
+          if (!empty($_SESSION['value_cpf'])) {
+            echo "value='" . $_SESSION['value_cpf'] . "'";
+            unset($_SESSION['value_cpf']);
+          }
+          ?> required minlength="11" maxlength="11" />
 
         <?php
         if (!empty($_SESSION['cpf_uso'])) {
@@ -92,7 +92,7 @@ session_start();
       </div>
       <div class="space"></div>
       <div class="input-field">
-        <input class="label" type="text" name="telefone" placeholder="Telefone" <?php
+        <input class="label" type="tel" name="telefone" placeholder="Telefone" <?php
                                                                                 if (!empty($_SESSION['value_telefoneC'])) {
                                                                                   echo "value='" . $_SESSION['value_telefoneC'] . "'";
                                                                                   unset($_SESSION['value_telefoneC']);

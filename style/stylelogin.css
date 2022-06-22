@@ -51,7 +51,7 @@ body {
 
 main.container{
   background: white;
-  min-width: 350px;
+  max-width: 350px;
   min-height: 45vh;
   padding: 2rem;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);

@@ -84,7 +84,7 @@ if (!empty($_GET['id'])) {
         <div class="space"></div>
 
         <div class="input-field">
-          <input class="label" type="text" name="telefone" value="<?php echo$telefone ?>"/>
+          <input class="label" type="tel" name="telefone" value="<?php echo$telefone ?>"/>
           <div class="underline"></div>
         </div>
         <div class="space"></div>
