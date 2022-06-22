@@ -20,7 +20,7 @@ Concluído.
 - `Crud do cliente`: No sistema, podemos cadastrar, listar, alterar e deletar um cliente.
 - `Crud do agendamento`: No sistema, podemos cadastrar, listar, alterar e deletar um agendamento.
 - `Crud do orçamento`: No sistema, podemos cadastrar, listar, alterar e deletar um orçamento.
-- `Gerar uma nota de compra`: Após ter feito o orçamento, podemos gerar uma nota de compra em PDF com as informçaões do agendamento do cliente.
+- `Gerar uma ordem de serviço`: Após ter feito o orçamento, podemos gerar uma ordem de serviço em PDF com as informçaões da empresa, cliente, agendamento e orçamanento do serviço especificado.
 
 ## Acesso ao projeto
 
