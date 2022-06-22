@@ -8,7 +8,7 @@ Desenvolvedores: Arthur Parente, Erick Vinicius e Gabriel Peres.
 
 ## Descrição do projeto
 
-Desenvolver um sistema interno que auxilie no sistema de agendamento de ordens de serviço da empresa.
+Desenvolver um sistema interno que auxilie no sistema de agendamento serviços da empresa.
 
 ## Status do Projeto
 
