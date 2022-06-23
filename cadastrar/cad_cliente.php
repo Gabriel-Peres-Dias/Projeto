@@ -18,9 +18,7 @@ session_start();
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -33,11 +31,11 @@ session_start();
       <h1>Cadastro de Cliente</h1>
       <div class="input-field">
         <input class="label" type="text" name="nome" placeholder="Nome" <?php
-        if (!empty($_SESSION['value_nomeC'])) {
-          echo "value='" . $_SESSION['value_nomeC'] . "'";
-          unset($_SESSION['value_nomeC']);
-        }
-        ?> required />
+                                                                        if (!empty($_SESSION['value_nomeC'])) {
+                                                                          echo "value='" . $_SESSION['value_nomeC'] . "'";
+                                                                          unset($_SESSION['value_nomeC']);
+                                                                        }
+                                                                        ?> required />
 
         <?php
         if (!empty($_SESSION['nomeC_uso'])) {
@@ -50,11 +48,11 @@ session_start();
       <div class="space"></div>
       <div class="input-field">
         <input class="label" type="email" name="email" placeholder="E-Mail" <?php
-          if (!empty($_SESSION['value_emailC'])) {
-            echo "value='" . $_SESSION['value_emailC'] . "'";
-            unset($_SESSION['value_emailC']);
-          }
-          ?> required />
+                                                                            if (!empty($_SESSION['value_emailC'])) {
+                                                                              echo "value='" . $_SESSION['value_emailC'] . "'";
+                                                                              unset($_SESSION['value_emailC']);
+                                                                            }
+                                                                            ?> required />
 
         <?php
         if (!empty($_SESSION['emailC_uso'])) {
@@ -67,11 +65,11 @@ session_start();
       <div class="space"></div>
       <div class="input-field">
         <input class="label" type="text" name="cpf" placeholder="CPF" <?php
-          if (!empty($_SESSION['value_cpf'])) {
-            echo "value='" . $_SESSION['value_cpf'] . "'";
-            unset($_SESSION['value_cpf']);
-          }
-          ?> required pattern="[0-9]{11}" minlength="11" maxlength="11" />
+                                                                      if (!empty($_SESSION['value_cpf'])) {
+                                                                        echo "value='" . $_SESSION['value_cpf'] . "'";
+                                                                        unset($_SESSION['value_cpf']);
+                                                                      }
+                                                                      ?> required pattern="[0-9]{11}" minlength="11" maxlength="11" />
 
         <?php
         if (!empty($_SESSION['cpf_uso'])) {
@@ -85,21 +83,21 @@ session_start();
 
       <div class="input-field">
         <input class="label" type="text" name="endereco" placeholder="Endereço" <?php
-      if (!empty($_SESSION['value_enderecoC'])) {
-        echo "value='" . $_SESSION['value_enderecoC'] . "'";
-        unset($_SESSION['value_enderecoC']);
-      }
-      ?> required />
+                                                                                if (!empty($_SESSION['value_enderecoC'])) {
+                                                                                  echo "value='" . $_SESSION['value_enderecoC'] . "'";
+                                                                                  unset($_SESSION['value_enderecoC']);
+                                                                                }
+                                                                                ?> required />
         <div class="underline"></div>
       </div>
       <div class="space"></div>
       <div class="input-field">
         <input class="label" type="tel" name="telefone" placeholder="Telefone" <?php
-        if (!empty($_SESSION['value_telefoneC'])) {
-          echo "value='" . $_SESSION['value_telefoneC'] . "'";
-          unset($_SESSION['value_telefoneC']);
-        }
-        ?> required pattern="[0-9]{11}" minlength="11" maxlength="11" />
+                                                                                if (!empty($_SESSION['value_telefoneC'])) {
+                                                                                  echo "value='" . $_SESSION['value_telefoneC'] . "'";
+                                                                                  unset($_SESSION['value_telefoneC']);
+                                                                                }
+                                                                                ?> required pattern="[0-9]{11}" minlength="11" maxlength="11" />
 
         <?php
         if (!empty($_SESSION['telefoneC_uso'])) {
@@ -109,7 +107,6 @@ session_start();
         ?>
         <div class="underline"></div>
       </div>
-      <div class="space"></div>
       <input class="button" type="submit" name="cadastrar_cliente" value="Cadastrar" />
     </form>
 

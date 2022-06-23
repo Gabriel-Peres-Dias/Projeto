@@ -119,7 +119,7 @@ if (!empty($_SESSION['value_endereco'])) {
     <footer>
       <div class="footer">
         <div class="logo">
-          <a href="../home/home_administrador.php"class="logo ">mecânica<span>baiano</span>.</a>
+          <a class="logo logo-alt" href="../home/home_administrador.php"class="logo ">mecânica<span>baiano</span>.</a>
         </div>
       </div>
     </footer>
