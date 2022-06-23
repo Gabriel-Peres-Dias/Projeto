@@ -28,11 +28,9 @@ Concluído.
 
 ## Abrir e rodar o projeto
 
-**Será necessário colocar o projeto em uma pasta chamada projeto!
-
-**Para utilizar o projeto, será necessário um servidor Web e um gerenciador de banco de dados.**
-- Caso use o XAMPP, criar uma pasta chamada projeto no diretório htdocs e colocar o projeto nela.
-- Abrir o MysqlWorkBench e abrir a pasta banco de dados, e abrir o arquivo "script" no software, depois é só rodar o script.
+**Para utilizar o projeto, será necessário o XAMPP.**
+- Criar uma pasta chamada "projeto" no diretório htdocs (pasta do XAMPP) e colocar o projeto nela.
+- Abrir o MysqlWorkBench e abrir a pasta banco de dados na pasta do projeto, e abrir o arquivo "script" no software, depois é só rodar o script.
 
 ## Tecnologias usadas
 
